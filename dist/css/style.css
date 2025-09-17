@@ -1,0 +1,170 @@
+:root {
+  /* Images Sizes for the Homepage */
+  --home-trendy-fashionable-couple-posing-img-width: 1440px;
+  --home-trendy-fashionable-couple-posing-img-height: 663px;
+  --home-T-SHIRT-WITH-TAPE-DETAILS-img-width: 296px;
+  --home-T-SHIRT-WITH-TAPE-DETAILS-img-height: 444px;
+  --home-SKINNY-FIT-JEANS-img-width: 268px;
+  --home-SKINNY-FIT-JEANS-img-height: 402px;
+  --home-CHECKERED-SHIRT-img-width: 296px;
+  --home-CHECKERED-SHIRT-img-height: 444px;
+  --home-SLEEVE-STRIPED-T-SHIRT-img-width: 268px;
+  --home-SLEEVE-STRIPED-T-SHIRT-img-height: 402px;
+  --home-VERTICAL-STRIPED-SHIRT-img-width: 296px;
+  --home-VERTICAL-STRIPED-SHIRT-img-height: 444px;
+  --home-COURAGE-GRAPHIC-T-SHIRT-img-width: 294px;
+  --home-COURAGE-GRAPHIC-T-SHIRT-img-height: 441px;
+  --home-LOOSE-FIT-BERMUDA-SHORTS-img-width: 296px;
+  --home-LOOSE-FIT-BERMUDA-SHORTS-img-height: 444px;
+  --home-FADED-SKINNY-JEANS-img-width: 252px;
+  --home-FADED-SKINNY-JEANS-img-height: 378px;
+  --home-Casual-img-width: 973px;
+  --home-Casual-img-height: 649px;
+  --home-Formal-img-width: 1306px;
+  --home-Formal-img-height: 870px;
+  --home-Party-img-width: 770px;
+  --home-Party-img-height: 616px;
+  --home-Gym-img-width: 452px;
+  --home-Gym-img-height: 677px;
+  /* Images Sizes for the Product Detail Page */
+  --prod-One-Life-Graphic-T-shirt-1-img-width: 444px;
+  --prod-One-Life-Graphic-T-shirt-1-img-height: 530px;
+  --prod-One-Life-Graphic-T-shirt-1-side-img-width: 152px;
+  --prod-One-Life-Graphic-T-shirt-1-side-img-height: 167px;
+  --prod-One-Life-Graphic-T-shirt-2-img-width: 152px;
+  --prod-One-Life-Graphic-T-shirt-2-img-height: 168px;
+  --prod-One-Life-Graphic-T-shirt-3-img-width: 152px;
+  --prod-One-Life-Graphic-T-shirt-3-img-height: 167px;
+  --prod-Polo-with-Contrast-Trims-img-width: 296px;
+  --prod-Polo-with-Contrast-Trims-img-height: 444px;
+  --prod-Gradient-Graphic-T-shirt-img-width: 296px;
+  --prod-Gradient-Graphic-T-shirt-img-height: 444px;
+  --prod-Polo-with-Tipping-Details-img-width: 296px;
+  --prod-Polo-with-Tipping-Details-img-height: 444px;
+  --prod-Black-Striped-T-shirt-img-width: 296px;
+  --prod-Black-Striped-T-shirt-img-height: 444px;
+  /* Images Sizes for the Category Page */
+  --cat-Gradient-Graphic-T-shirt-img-width: 294px;
+  --cat-Gradient-Graphic-T-shirt-img-height: 441px;
+  --cat-Polo-with-Tipping-Details-img-width: 296px;
+  --cat-Polo-with-Tipping-Details-img-height: 444px;
+  --cat-Black-Striped-T-shirt-img-width: 296px;
+  --cat-Black-Striped-T-shirt-img-height: 444px;
+  --cat-skinny-fit-jeans-img-width: 268px;
+  --cat-skinny-fit-jeans-img-height: 402px;
+  --cat-Checked-Shirt-img-width: 296px;
+  --cat-Checked-Shirt-img-height: 444px;
+  --cat-Sleeve-Striped-T-shirt-img-width: 296px;
+  --cat-Sleeve-Striped-T-shirt-img-height: 444px;
+  --cat-Vertical-Striped-Shirt-img-width: 296px;
+  --cat-Vertical-Striped-Shirt-img-height: 444px;
+  --cat-Courage-Graphic-T-shirt-img-width: 294px;
+  --cat-Courage-Graphic-T-shirt-img-height: 441px;
+  --cat-Loose-Fit-Bermuda-Shorts-img-width: 296px;
+  --cat-Loose-Fit-Bermuda-Shorts-img-height: 444px;
+  /* Images Sizes for the Cart Page */
+  --cart-Gradient-Graphic-T-shirt-img-width: 125px;
+  --cart-Gradient-Graphic-T-shirt-img-height: 187px;
+  --cart-checked-shirt-img-width: 125px;
+  --cart-checked-shirt-img-height: 187px;
+  --cart-skinny-fit-jeans-img-width: 102px;
+  --cart-skinny-fit-jeans-img-height: 153px;
+}
+
+:root {
+  /* Colors */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-yellow-stars: #FFC633;
+  --color-green-checkmark: #01AB31;
+  /* Color options for purchase */
+  --color-olive-option: #4F4631;
+  --color-darkgreen-option: #314F4A;
+  --color-deeppurple-option: #31344F;
+  /* Category page color options */
+  --color-green: #00C12B;
+  --color-red: #F50606;
+  --color-yellow: #F5DD06;
+  --color-orange: #F57906;
+  --color-cyan: #06CAF5;
+  --color-blue: #063AF5;
+  --color-violet: #7D06F5;
+  --color-pink: #F506A4;
+  --color-greybg: #F0F0F0;
+  /* search bar in nav bar and browse by dress style part */
+  /* Hero part */
+  --color-h1-background: #F2F0F1;
+  /* behind the couple photo */
+  /* New arrival part */
+  --color-darkergrey-p: #00000099;
+  /* paragraphs under headings , beside stars ratings ,in Footer */
+  --color-lightergrey-p: #00000066;
+  /* email address in home and og price before discount */
+  --color-red-discount: #FF3333;
+  --color-red-discount-bg: #FF33331A;
+  --color-grey-border: #0000001A;
+  /* our happy customers border and buttons border */
+  --color-greybg-pagenum: #0000000F;
+  /* Product detail page only */
+  --color-grey-ogprice: #0000004D;
+  /* Fonts */
+  --font-family-headings: "Bebas Neue", sans-serif;
+  /* integral cf is not free so got this one */
+  --font-family-body: "Satoshi", sans-serif;
+  /* Font weights */
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  /* its size is normal in big buttons text , footer medium boldness,discount perc */
+  /* Main font sizes */
+  --font-size-h1: 64px;
+  --font-size-h2: 48px;
+  /* new arrival */
+  --font-size-h3: 36px;
+  /* styles in browse by dressing style */
+  --font-size-h4: 20px;
+  /* bold text under products, name in reviews */
+  --font-size-body: 16px;
+  /* almost everything grey */
+  --font-size-small: 14px;
+  --font-size-price: 24px;
+  --font-size-discount: 12px;
+  /* percentage */
+  /* For nav and footer */
+  --font-size-logo: 32px;
+  --font-size-footer-logo: 33.45px;
+  --font-size-footer-p: 14px;
+  /* Frequently used sizes */
+  --font-size-product-name: 20px;
+  --font-size-review-names: 20px;
+  --font-size-grey-rating: 14px;
+  /* under products */
+  --font-size-bold-white-text: 40px;
+  /* Specific to certain pages */
+  /* Home page */
+  --font-size-hero-numbers: 40px;
+  /* 200+ */
+  /* Product detail page top half */
+  --font-size-productpage-name: 40px;
+  --font-size-grey-productpage-rating: 16px;
+  --font-size-productpage-price: 32px;
+  --font-size-productpage-discount-percentage: 16px;
+  --font-size-productpage-allreviews: 24px;
+  --font-size-productpage-review-date: 22px;
+  /* Category page */
+  --font-size-style-category: 32px;
+  --font-size-categorypage-buttons-text: 14px;
+  /* Filters in category page */
+  --font-size-filter-regular: 14px;
+  /* including price interval numbers */
+  --font-size-grey-filter-dress-styles-text: 16px;
+  /* including price interval numbers */
+  /* Cart page */
+  --font-size-cart-h1: 40px;
+  --font-size-product-info: 14px;
+  --font-size-order-summary: 24px;
+  --font-size-summary-info: 20px;
+  --font-size-total-price: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */
