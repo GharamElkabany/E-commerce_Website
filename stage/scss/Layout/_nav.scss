@@ -1,0 +1,140 @@
+$primary-black: #000;
+$primary-white: #fff;
+$border-color: #eaeaea;
+
+@font-face {
+	font-family: 'Integral CF';
+	src: url('../fonts/IntegralCF.woff2') format('woff2'),
+		url('../fonts/IntegralCF.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.top-strip {
+	background-color: $primary-black;
+	font-size: 0.9rem;
+	position: relative;
+	width: 100%;
+	a {
+		text-decoration: underline;
+		margin-left: 5px;
+		font-weight: 500;
+	}
+
+	.btn-close {
+		position: absolute;
+		right: 10px;
+		top: 4px;
+		color: $primary-white;
+	}
+}
+
+.navbar {
+	// margin: 0 100px;
+	padding: 20px 100px;
+	gap: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	overflow-x: hidden;
+	// flex-wrap: wrap;
+
+	.navbar-brand {
+		font-family: 'Integral CF', sans-serif;
+		font-weight: 700;
+		font-size: 32px;
+		vertical-align: middle;
+		color: $primary-black;
+		margin-right: auto; // push everything else to the right
+		max-width: 100%;
+	}
+
+	i {
+		font-size: 1.3rem;
+	}
+
+	.search-form {
+		position: relative;
+		// width: 577px;
+		width: 100%;
+		.search-icon {
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			transform: translateY(-50%);
+			font-size: 1.2rem;
+			color: #999;
+			pointer-events: none; // prevents icon blocking clicks
+		}
+
+		.search-input {
+			width: 100%;
+			padding: 10px 15px 10px 45px; // left padding for icon
+			border: none;
+			border-radius: 62px;
+			background-color: #f0f0f0;
+			font-size: 0.95rem;
+			max-width: 100%;
+
+			&:focus {
+				outline: none;
+				box-shadow: 0 0 0 2px rgba(83, 93, 161, 0.2); // subtle highlight on focus
+			}
+		}
+	}
+
+	.nav-link {
+		font-size: 1rem;
+		margin-right: 15px;
+		color: #000;
+		white-space: nowrap;
+
+		.nav-icon {
+			width: 24px;
+			height: 24px;
+			object-fit: contain;
+			/* keeps aspect ratio */
+			margin-right: -8px;
+			/* spacing from input */
+		}
+
+		.bi {
+			font-weight: bold !important;
+		}
+
+		.bi::before {
+			font-weight: bold !important;
+			// stroke-width: 6px !important;
+		}
+
+		&:hover {
+			color: #535da1;
+		}
+	}
+
+
+	// Hide desktop search bar in mobile
+	@media (max-width: 576px) {
+		margin: 0 20px;
+		padding: 20px 0;
+		font-size: 25px;
+
+		.navbar-brand {
+			font-size: 25px;
+		}
+
+		.search-form {
+			display: none !important;
+		}
+
+		.nav-icons {
+			display: flex; // show icons on the right
+			margin-left: auto;
+		}
+
+		.navbar-brand {
+			margin-right: auto; // logo left
+		}
+	}
+}
