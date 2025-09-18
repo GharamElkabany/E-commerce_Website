@@ -14,20 +14,20 @@ nav.navbar.navbar-expand-sm.bg-white.container-fluid
 
 
     // Collapsible menu
-    #navbarNav.collapse.navbar-collapse.mt-3.mt-lg-0
+    #navbarNav.collapse.navbar-collapse.mt-lg-0
         ul.navbar-nav.me-auto.mb-2.mb-lg-0
-            li.nav-item.dropdown.ms-5.ms-lg-3
-            a.nav-link.dropdown-toggle(href="#", role="button", data-bs-toggle="dropdown") Shop
-            ul.dropdown-menu
-                li: a.dropdown-item(href="#") Men
-                li: a.dropdown-item(href="#") Women
-                li: a.dropdown-item(href="#") Kids
+            li.nav-item.dropdown.ms-md-3.ms-lg-5.ms-sm-0
+                a.nav-link.dropdown-toggle(href="#", role="button", data-bs-toggle="dropdown") Shop
+                ul.dropdown-menu
+                    li: a.dropdown-item(href="#") Men
+                    li: a.dropdown-item(href="#") Women
+                    li: a.dropdown-item(href="#") Kids
             li.nav-item
-            a.nav-link(href="#") On Sale
+                a.nav-link(href="#") On Sale
             li.nav-item
-            a.nav-link(href="#") New Arrivals
+                a.nav-link(href="#") New Arrivals
             li.nav-item
-            a.nav-link(href="#") Brands
+                a.nav-link(href="#") Brands
 
     // Search bar visible only in desktop
     // Search bar
@@ -39,11 +39,11 @@ nav.navbar.navbar-expand-sm.bg-white.container-fluid
     // Right icons
     .d-flex.ms-3
         a.nav-link.px-2.d-sm-none(href="#")
-            img.nav-icon(src="../assets/images/search-icon.svg" alt="Search")
+            img.nav-icon(src="assets/images/search-icon.svg" alt="Search")
+        a.nav-link.px-2(href="cart.html")
+            img.nav-icon(src="assets/images/cart-icon.svg" alt="Cart")
         a.nav-link.px-2(href="#")
-            img.nav-icon(src="../assets/images/cart-icon.svg" alt="Cart")
-        a.nav-link.px-2(href="#")
-            img.nav-icon(src="../assets/images/profile-icon.svg" alt="Profile")
+            img.nav-icon(src="assets/images/profile-icon.svg" alt="Profile")
 
 
     

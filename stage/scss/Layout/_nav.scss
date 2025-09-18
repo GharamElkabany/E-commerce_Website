@@ -1,20 +1,21 @@
-$primary-black: #000;
-$primary-white: #fff;
-$border-color: #eaeaea;
+// $primary-black: #000;
+// $primary-white: #fff;
+// $border-color: #eaeaea;
 
-@font-face {
-	font-family: 'Integral CF';
-	src: url('../fonts/IntegralCF.woff2') format('woff2'),
-		url('../fonts/IntegralCF.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: 'Integral CF';
+// 	src: url('../fonts/IntegralCF.woff2') format('woff2'),
+// 		url('../fonts/IntegralCF.woff') format('woff');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
 
 .top-strip {
-	background-color: $primary-black;
-	font-size: 0.9rem;
+	background-color: var(--color-black);
+	font-size: var(--font-size-small);
 	position: relative;
 	width: 100%;
+
 	a {
 		text-decoration: underline;
 		margin-left: 5px;
@@ -25,39 +26,50 @@ $border-color: #eaeaea;
 		position: absolute;
 		right: 10px;
 		top: 4px;
-		color: $primary-white;
+		color: var(--color-white);
 	}
 }
 
 .navbar {
+	position: relative;
+	
 	// margin: 0 100px;
-	padding: 20px 100px;
-	gap: 40px;
+	padding: 20px 5%;
+	gap: 1rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 	overflow-x: hidden;
 	// flex-wrap: wrap;
+	overflow: visible;
 
 	.navbar-brand {
-		font-family: 'Integral CF', sans-serif;
-		font-weight: 700;
-		font-size: 32px;
+		font-family: var(--font-family-body);
+		font-weight: var(--font-weight-bold);
+		font-size: var(--font-size-logo);
 		vertical-align: middle;
-		color: $primary-black;
+		color: var(--color-black);
 		margin-right: auto; // push everything else to the right
 		max-width: 100%;
 	}
 
+	.dropdown-menu {
+		max-height: 80vh; // Prevents dropdown from exceeding viewport
+		overflow-y: auto; // Adds internal scroll if needed
+		margin-bottom: 10px; // Prevents touching the bottom edge
+		box-sizing: border-box;
+	}
+
 	i {
-		font-size: 1.3rem;
+		font-size: var(--font-size-body);
 	}
 
 	.search-form {
 		position: relative;
 		// width: 577px;
 		width: 100%;
+
 		.search-icon {
 			position: absolute;
 			top: 50%;
@@ -73,9 +85,11 @@ $border-color: #eaeaea;
 			padding: 10px 15px 10px 45px; // left padding for icon
 			border: none;
 			border-radius: 62px;
-			background-color: #f0f0f0;
-			font-size: 0.95rem;
+			background-color: var(--color-greybg);
+			font-size: var(--font-size-body);
 			max-width: 100%;
+			flex: 1; // let it grow/shrink naturally
+			max-width: 577px; // keep your desktop width but allow shrink
 
 			&:focus {
 				outline: none;
@@ -87,7 +101,7 @@ $border-color: #eaeaea;
 	.nav-link {
 		font-size: 1rem;
 		margin-right: 15px;
-		color: #000;
+		color: var(--color-black);
 		white-space: nowrap;
 
 		.nav-icon {
@@ -119,6 +133,7 @@ $border-color: #eaeaea;
 		margin: 0 20px;
 		padding: 20px 0;
 		font-size: 25px;
+		gap: 0;
 
 		.navbar-brand {
 			font-size: 25px;
