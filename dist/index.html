@@ -11,7 +11,38 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <nav>hello</nav>
+    <!-- Top black strip-->
+    <div class="top-strip bg-dark text-center text-white py-1">
+       Sign up and get 20% off to your first order. <a class="text-white" href="#">Sign Up Now</a>
+      <button class="btn-close btn-close-white float-end me-3" aria-label="Close"></button>
+    </div>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-sm bg-white container-fluid">
+      <!-- Brand with toggler (hamburger)-->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><i class="bi bi-list fs-3"></i></button><a class="navbar-brand fw-bold ms-2" href="#">SHOP.CO</a>
+      <!-- Collapsible menu-->
+      <div class="collapse navbar-collapse mt-lg-0" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown ms-md-3 ms-lg-5 ms-sm-0"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shop</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Men</a></li>
+              <li><a class="dropdown-item" href="#">Women</a></li>
+              <li><a class="dropdown-item" href="#">Kids</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">On Sale</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+        </ul>
+      </div>
+      <!-- Search bar visible only in desktop-->
+      <!-- Search bar-->
+      <form class="search-form d-none d-sm-flex mx-auto" role="search"><i class="bi bi-search search-icon"></i>
+        <input class="search-input" type="search" placeholder="Search for products..." name="search" aria-label="Search">
+      </form>
+      <!-- Right icons-->
+      <div class="d-flex ms-3"><a class="nav-link px-2 d-sm-none" href="#"><img class="nav-icon" src="assets/images/search-icon.svg" alt="Search"></a><a class="nav-link px-2" href="cart.html"><img class="nav-icon" src="assets/images/cart-icon.svg" alt="Cart"></a><a class="nav-link px-2" href="#"><img class="nav-icon" src="assets/images/profile-icon.svg" alt="Profile"></a></div>
+    </nav>
     <h1>Welcome to my shop</h1>
     <button>Buy now</button><img src="./assets/images/Casual.svg" alt="">
   </body>
