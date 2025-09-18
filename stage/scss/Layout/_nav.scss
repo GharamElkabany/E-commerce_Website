@@ -32,7 +32,7 @@
 
 .navbar {
 	position: relative;
-	
+
 	// margin: 0 100px;
 	padding: 20px 5%;
 	gap: 1rem;
@@ -43,6 +43,19 @@
 	overflow-x: hidden;
 	// flex-wrap: wrap;
 	overflow: visible;
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 1px;
+		background: #eaeaea;
+		margin: 0 5%; // matches navbar padding
+		z-index: 10;
+	}
 
 	.navbar-brand {
 		font-family: var(--font-family-body);

@@ -196,6 +196,18 @@
   overflow-x: hidden;
   overflow: visible;
 }
+.navbar::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #eaeaea;
+  margin: 0 5%;
+  z-index: 10;
+}
 .navbar .navbar-brand {
   font-family: var(--font-family-body);
   font-weight: var(--font-weight-bold);
