@@ -147,9 +147,11 @@
 		padding: 20px 0;
 		font-size: 25px;
 		gap: 0;
-
+		justify-content: space-evenly;
 		.navbar-brand {
 			font-size: 25px;
+			// margin-right: 0;
+			margin-right: 5%; // logo left
 		}
 
 		.search-form {
@@ -159,10 +161,6 @@
 		.nav-icons {
 			display: flex; // show icons on the right
 			margin-left: auto;
-		}
-
-		.navbar-brand {
-			margin-right: auto; // logo left
 		}
 	}
 }
