@@ -283,9 +283,11 @@
     padding: 20px 0;
     font-size: 25px;
     gap: 0;
+    justify-content: space-evenly;
   }
   .navbar .navbar-brand {
     font-size: 25px;
+    margin-right: 5%;
   }
   .navbar .search-form {
     display: none !important;
@@ -294,14 +296,105 @@
     display: flex;
     margin-left: auto;
   }
-  .navbar .navbar-brand {
-    margin-right: auto;
-  }
 }
 
 .body {
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+.breadcrumb {
+  font-family: "Satoshi", sans-serif;
+  font-size: 0.95rem;
+}
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: #888;
+}
+.breadcrumb a {
+  color: #888;
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+.breadcrumb .active {
+  color: #000;
+  font-weight: 500;
+}
+
+.main h1 {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-cart-h1);
+}
+.main h5 {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-product-name);
+}
+
+.cart-items {
+  width: 100%;
+  border: 1px solid #eee;
+  background: var(--color-white);
+  border-radius: 20px;
+}
+
+.cart-item {
+  background: var(--color-white);
+  width: 100%;
+}
+.cart-item .cart-img {
+  width: 30%;
+  height: 30%;
+  border-radius: 8px;
+}
+.cart-item .item-details {
+  font-family: var(--font-family-body);
+}
+.cart-item .item-details p {
+  font-size: var(--font-size-total-price);
+}
+.cart-item:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #eaeaea;
+  z-index: 10;
+}
+
+.summary-box {
+  border: 1px solid #eee;
+  background: var(--color-white);
+  border-radius: 20px;
+  font-family: var(--font-family-body);
+}
+.summary-box h5 {
+  font-size: var(--font-size-order-summary);
+}
+.summary-box .input-group-text {
+  border-top-left-radius: 62px !important;
+  border-bottom-left-radius: 62px !important;
+  border: none;
+  background-color: var(--color-greybg);
+}
+.summary-box .input-group-text i {
+  font-size: 21px;
+  color: #555;
+}
+.summary-box input,
+.summary-box .form-control {
+  border-top-right-radius: 62px !important;
+  border-bottom-right-radius: 62px !important;
+  margin-right: 16px;
+  background-color: var(--color-greybg);
+  border: none !important;
+}
+.summary-box button {
+  border-radius: 62px !important;
 }
 
 footer .newsletter-wrapper {

@@ -1,4 +1,130 @@
-.body{
-    box-sizing: border-box;
-    overflow-x: hidden;
+.body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.breadcrumb {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 0.95rem;
+
+  .breadcrumb-item+.breadcrumb-item::before {
+    content: ">";
+    color: #888;
+  }
+
+  a {
+    color: #888;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .active {
+    color: #000;
+    font-weight: 500;
+  }
+}
+
+.main {
+  h1 {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-cart-h1);
+    // margin-bottom: 20px;
+  }
+
+  h5 {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-product-name);
+    // font-weight: 600;
+  }
+}
+
+.cart-items {
+  width: 100%;
+  border: 1px solid #eee;
+  background: var(--color-white);
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  // padding: 20px;
+  // margin-bottom: 30px;
+}
+
+.cart-item {
+  // border: 1px solid #eee;
+  background: var(--color-white);
+  width: 100%;
+
+  .cart-img {
+    width: 30%;
+    height: 30%;
+    border-radius: 8px;
+  }
+
+  .item-details {
+    font-family: var(--font-family-body);
+
+    // h5 {
+    //   font-family: 'Bebas Neue', cursive;
+    // }
+    p {
+      font-size: var(--font-size-total-price);
+    }
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #eaeaea;
+    // margin: 0 5%; // matches navbar padding
+    z-index: 10;
+  }
+}
+
+.summary-box {
+  //   background: #fff;
+  border: 1px solid #eee;
+  background: var(--color-white);
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  font-family: var(--font-family-body);
+
+  h5 {
+    font-size: var(--font-size-order-summary);
+  }
+
+  .input-group-text {
+    // border-radius: 62px !important;
+    border-top-left-radius: 62px !important;
+    border-bottom-left-radius: 62px !important;
+    border: none;
+    background-color: var(--color-greybg); // light gray background
+
+    i {
+      font-size: 21px;
+      color: #555; // subtle gray icon
+    }
+  }
+
+  input,
+  .form-control {
+    // border-radius: 62px !important;
+    border-top-right-radius: 62px !important;
+    border-bottom-right-radius: 62px !important;
+    margin-right: 16px;
+    background-color: var(--color-greybg);
+    // border-left: none !important;
+    border: none !important;
+
+  }
+
+  button {
+    border-radius: 62px !important;
+  }
 }
