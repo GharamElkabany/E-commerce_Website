@@ -299,6 +299,88 @@
   }
 }
 
+.home-section {
+  background-color: var(--color-h1-background);
+  margin: 0;
+}
+.home-section h1 {
+  font-family: var(--font-family-headings);
+  font-weight: var(--font-weight-bold);
+  font-size: 90px;
+}
+.home-section p {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body);
+  color: var(--color-darkergrey-p);
+  line-height: 1.5rem;
+}
+.home-section button {
+  border: none;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 10px;
+  border-radius: 25px;
+}
+.home-section button a {
+  text-decoration: none;
+  color: inherit;
+}
+.home-section .hero-number {
+  font-size: var(--font-size-hero-numbers);
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-family-headings);
+}
+.home-section .hero-number:nth-child(1) {
+  border-right: 1px solid rgba(153, 155, 159, 0.4196078431);
+}
+.home-section .hero-number:nth-child(2) {
+  border-right: 1px solid rgba(153, 155, 159, 0.4196078431);
+}
+.home-section .hero-number span {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-body);
+  color: var(--color-darkergrey-p);
+}
+.home-section .hero-img {
+  display: flex;
+  justify-content: flex-end;
+}
+.home-section .hero-img .big-star, .home-section .hero-img .small-star {
+  position: absolute;
+  z-index: 2;
+}
+.home-section .hero-img .big-star {
+  top: 20%;
+  right: 10%;
+}
+.home-section .hero-img .small-star {
+  top: 50%;
+  right: 80%;
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  .hero-img .couple {
+    width: 150%;
+    object-fit: cover;
+    object-position: right;
+    position: relative;
+    right: 0;
+  }
+  .hero-img .big-star {
+    top: 10% !important;
+    right: 3% !important;
+  }
+  .hero-img .small-star {
+    top: 50% !important;
+    right: 70% !important;
+  }
+}
 .body {
   box-sizing: border-box;
   overflow-x: hidden;
