@@ -1,0 +1,97 @@
+.home-section {
+    background-color: var(--color-h1-background);
+    margin: 0;
+
+    h1 {
+        font-family: var(--font-family-headings);
+        font-weight: var(--font-weight-bold);
+        font-size: 90px;
+    }
+
+    p {
+        font-family: var(--font-family-body);
+        font-weight: var(--font-weight-regular);
+        font-size: var(--font-size-body);
+        color: var(--color-darkergrey-p);
+        line-height: 1.5rem;
+    }
+
+    button{
+        border: none;
+        background-color: var(--color-black);
+        color: var(--color-white);
+        padding: 10px;
+        border-radius: 25px;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    .hero-number {
+        font-size: var(--font-size-hero-numbers);
+        font-weight: var(--font-weight-medium);
+        font-family: var(--font-family-headings);
+
+        &:nth-child(1) {
+            border-right: 1px solid #999b9f6b;
+        }
+
+        &:nth-child(2) {
+            border-right: 1px solid #999b9f6b;
+        }
+
+        span {
+            font-family: var(--font-family-body);
+            font-weight: var(--font-weight-regular);
+            font-size: var(--font-size-body);
+            color: var(--color-darkergrey-p);
+        }
+    }
+
+    .hero-img {
+        display: flex;
+        justify-content: flex-end;
+
+        .big-star, .small-star {
+            position: absolute;
+            z-index: 2;
+        }
+
+        .big-star {
+            top: 20%;
+            right: 10%;
+        }
+
+        .small-star {
+            top: 50%;
+            right: 80%;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-img {
+        justify-content: flex-end;
+        overflow: hidden;
+
+        .couple {
+            width: 150%;
+            object-fit: cover;
+            object-position: right; 
+            position: relative;
+            right: 0;
+        }
+
+        .big-star {
+            top: 10% !important;
+            right: 3% !important;
+        }
+
+        .small-star {
+            top: 50% !important;
+            right: 70% !important;
+        }
+    }
+}
