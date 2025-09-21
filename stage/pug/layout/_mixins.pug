@@ -1,0 +1,26 @@
+mixin productCard(image, title, fullStarSvg, halfStarSvg, fullStarsCount, halfStarsCount, ratingText, price, originalPrice, discount, cardHeight='300px')
+  .product-card
+    img(src=image alt=title style=`height: ${cardHeight};`)
+    .product-info
+      h3= title
+      .rating
+        // Full stars
+        each val in Array(fullStarsCount)
+          img(src=fullStarSvg alt='full star')
+        
+        // Half stars
+        each val in Array(halfStarsCount)
+          img(src=halfStarSvg alt='half star')
+        
+        // Rating text
+        span= ratingText
+
+      .pricing-info
+        .current-price= price
+        if originalPrice
+          .original-price
+            span= originalPrice
+        if discount
+          .discount
+            span= `-${discount}%`
+
