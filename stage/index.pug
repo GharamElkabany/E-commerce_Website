@@ -42,10 +42,157 @@ html(lang="en")
                     .small-star.position-absolute
                         img(src="./assets/home/icons/small-star.svg", alt="small-star")    
 
-        //- new-arrival-section
+        // brands-section
+        .brands-container.bg-dark
+            .container.p-3
+                .row.d-flex.align-items-center.justify-content-center
+                    .col-4.col-sm-3.col-md-2.gy-4.mb-3.d-flex.justify-content-center
+                        img(src='./assets/home/brands-logos/versace-logo.svg' alt='versace').img-fluid
+                    .col-4.col-sm-3.col-md-2.gy-4.mb-3.d-flex.justify-content-center
+                        img(src='./assets/home/brands-logos/zara-logo.svg' alt='zara').img-fluid
+                    .col-4.col-sm-3.col-md-2.gy-4.mb-3.me-lg-5.d-flex.justify-content-center
+                        img(src='./assets/home/brands-logos/gucci-logo.svg' alt='gucci').img-fluid
+                    .col-4.col-sm-3.col-md-2.gy-4.mb-3.me-lg-5.d-flex.justify-content-center
+                        img(src='./assets/home/brands-logos/prada-logo.svg' alt='prada').img-fluid
+                    .col-4.col-sm-3.col-md-2.gy-4.mb-3.d-flex.justify-content-center
+                        img(src='./assets/home/brands-logos/calvinKlein-logo.svg' alt='calvinKlein').img-fluid
+        
+        // new-arrival-section
+        include ./pug/layout/_mixins.pug
 
+        .clothes-container
+            .container
+                .row
+                    .col-12.text-center
+                        h2.text-center new arrivals
 
-        //- top-selling-section
+                .row.justify-content-between.mt-4
+                    .scroll-container.d-flex.justify-content-between 
+                            .col-7.col-sm-7.col-md-5.col-lg-4.col-xl-3.d-flex.justify-content-center
+                                    +productCard(
+                                        './assets/images/T-SHIRT-WITH-TAPE-DETAILS.svg', 
+                                        'T-shirt with Tape Details', 
+                                        './assets/home/icons/full-rate-star.svg', 
+                                        './assets/home/icons/half-rate-star.svg', 
+                                        4, 
+                                        1, 
+                                        '4.5/5', 
+                                        '$120', 
+                                        NULL,
+                                        NULL
+                                    )
+                            .col-7.col-sm-7.col-md-5.col-lg-4.col-xl-3.d-flex.justify-content-center
+                                    +productCard(
+                                        './assets/images/SKINNY-FIT-JEANS.svg', 
+                                        'Skinny Fit Jeans', 
+                                        './assets/home/icons/full-rate-star.svg', 
+                                        './assets/home/icons/half-rate-star.svg', 
+                                        3, 
+                                        1, 
+                                        '3.5/5', 
+                                        '$240', 
+                                        '$260', 
+                                        '20'
+                                    )
+                            .col-7.col-sm-7.col-md-5.col-lg-4.col-xl-3.d-flex.justify-content-center
+                                    +productCard(
+                                        './assets/images/CHECKERED-SHIRT.svg', 
+                                        'Checkered Shirt', 
+                                        './assets/home/icons/full-rate-star.svg', 
+                                        './assets/home/icons/half-rate-star.svg', 
+                                        4, 
+                                        1, 
+                                        '4.5/5', 
+                                        '$180', 
+                                        NULL, 
+                                        NULL
+                                    )
+                            .col-7.col-sm-7.col-md-5.col-lg-4.col-xl-3.d-flex.justify-content-center
+                                    +productCard(
+                                        './assets/images/SLEEVE-STRIPED-T-SHIRT.svg', 
+                                        'Sleeve Striped T-shirt', 
+                                        './assets/home/icons/full-rate-star.svg', 
+                                        './assets/home/icons/half-rate-star.svg', 
+                                        4, 
+                                        1, 
+                                        '4.5/5', 
+                                        '$130', 
+                                        '$160', 
+                                        '30'
+                                    )
+
+                .row.row-cols-12.row-cols-md-4.justify-content-center
+                    button.mt-5.px-5.py-2.rounded-pill 
+                        a(href="category.html") View All                
+                         
+        hr.responsive-hr
+
+        // Top-selling-section
+        .clothes-container
+            .container
+                .row
+                    .col-12.text-center
+                        h2.text-center top selling
+
+                .row.justify-content-between.mt-4
+                    .scroll-container.d-flex.justify-content-between 
+                            .col-7.col-sm-7.col-md-5.col-lg-4.col-xl-3.d-flex.justify-content-center
+                                    +productCard(
+                                        './assets/images/VERTICAL-STRIPED-SHIRT.svg', 
+                                        'Vertical Striped Shirt', 
+                                        './assets/home/icons/full-rate-star.svg', 
+                                        './assets/home/icons/half-rate-star.svg', 
+                                        5, 
+                                        0, 
+                                        '5.0/5', 
+                                        '$212', 
+                                        '232',
+                                        '20'
+                                    )
+                            .col-7.col-sm-7.col-md-5.col-lg-4.col-xl-3.d-flex.justify-content-center
+                                    +productCard(
+                                        './assets/images/COURAGE-GRAPHIC-T-SHIRT.svg', 
+                                        'Courage Graphic T-shirt', 
+                                        './assets/home/icons/full-rate-star.svg', 
+                                        './assets/home/icons/half-rate-star.svg', 
+                                        4, 
+                                        0, 
+                                        '4.0/5', 
+                                        '$145', 
+                                        NULL, 
+                                        NULL
+                                    )
+                            .col-7.col-sm-7.col-md-5.col-lg-4.col-xl-3.d-flex.justify-content-center
+                                    +productCard(
+                                        './assets/images/LOOSE-FIT-BERMUDA-SHORTS.svg', 
+                                        'Loose Fit Bermuda Shorts', 
+                                        './assets/home/icons/full-rate-star.svg', 
+                                        './assets/home/icons/half-rate-star.svg', 
+                                        3, 
+                                        0, 
+                                        '3.0/5', 
+                                        '$80', 
+                                        NULL, 
+                                        NULL
+                                    )
+                            .col-7.col-sm-7.col-md-5.col-lg-4.col-xl-3.d-flex.justify-content-center
+                                    +productCard(
+                                        './assets/images/FADED-SKINNY-JEANS.svg', 
+                                        'Faded Skinny Jeans', 
+                                        './assets/home/icons/full-rate-star.svg', 
+                                        './assets/home/icons/half-rate-star.svg', 
+                                        4, 
+                                        1, 
+                                        '4.5/5', 
+                                        '$210', 
+                                        NULL, 
+                                        NULL
+                                    )
+
+                .row.row-cols-12.row-cols-md-4.justify-content-center
+                    button.mt-5.px-5.py-2.rounded-pill 
+                        a(href="category.html") View All                
+                        
 
 
         //- dress-style-section

@@ -5,7 +5,7 @@
     h1 {
         font-family: var(--font-family-headings);
         font-weight: var(--font-weight-bold);
-        font-size: 90px;
+        font-size: 5rem;
     }
 
     p {
@@ -52,6 +52,8 @@
     .hero-img {
         display: flex;
         justify-content: flex-end;
+        object-fit: cover;
+        z-index: 1;
 
         .big-star, .small-star {
             position: absolute;
@@ -70,28 +72,78 @@
     }
 }
 
+.clothes-container {
+    padding: 4rem 2rem;
+
+    h2 {
+        text-transform: uppercase;
+        font-family: var(--font-family-headings);
+        font-weight: var(--font-weight-bold);
+        font-size: 3.5rem;
+    }
+
+    .scroll-container {
+        display: flex;
+        gap: 1rem; 
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        scroll-snap-type: x mandatory; 
+
+        .product-cards {
+            flex: 0 0 auto; 
+            scroll-snap-align: start;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    button {
+        background-color: var(--color-white);
+        border: 2px solid var(--color-greybg);
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+.responsive-hr {
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+    border-top: 2px solid #d5d2d2;
+}
+
 
 @media (max-width: 768px) {
-    .hero-img {
-        justify-content: flex-end;
-        overflow: hidden;
-
-        .couple {
-            width: 150%;
-            object-fit: cover;
-            object-position: right; 
-            position: relative;
-            right: 0;
+    .home-section {
+        h1 {
+            font-size: 4rem;
         }
 
-        .big-star {
-            top: 10% !important;
-            right: 3% !important;
-        }
+        .hero-img {
+            justify-content: flex-end;
+            overflow: hidden;
 
-        .small-star {
-            top: 50% !important;
-            right: 70% !important;
+            .couple {
+                width: 150%;
+                object-fit: cover;
+                object-position: right; 
+                position: relative;
+                right: 0;
+            }
+
+            .big-star {
+                top: 10% !important;
+                right: 3% !important;
+            }
+
+            .small-star {
+                top: 50% !important;
+                right: 70% !important;
+            }
         }
     }
 }
