@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   /* Images Sizes for the Homepage */
   --home-trendy-fashionable-couple-posing-img-width: 1440px;
@@ -193,6 +194,9 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   overflow-x: hidden;
   overflow: visible;
 }
@@ -256,7 +260,7 @@
 }
 .navbar .nav-link {
   font-size: 1rem;
-  margin-right: 15px;
+  margin-right: 1rem;
   color: var(--color-black);
   white-space: nowrap;
 }
@@ -277,13 +281,19 @@
 .navbar .nav-link:hover {
   color: #535da1;
 }
-@media (max-width: 576px) {
+@media (max-width: 770px) {
   .navbar {
-    margin: 0 20px;
+    overflow-x: hidden;
     padding: 20px 0;
     font-size: 25px;
-    gap: 0;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  .navbar::after {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
   .navbar .navbar-brand {
     font-size: 25px;
@@ -296,8 +306,102 @@
     display: flex;
     margin-left: auto;
   }
+  .navbar .navbar-nav .nav-item {
+    display: inline-block;
+    /* shrink-wrap to content */
+    width: auto;
+    /* no forced width */
+    margin: 0;
+    /* reset Bootstrap margins if any */
+    width: 50%;
+  }
+  .navbar .navbar-nav .nav-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar {
+    /* ✅ Mobile dropdown fix */
+  }
+  .navbar .navbar-nav .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    box-shadow: none;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-left: 1rem;
+  }
+  .navbar #navbarNav {
+    overflow: visible !important;
+  }
 }
 
+/* visually-hidden (keeps element accessible/clickable) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Mobile search form (hidden by default) */
+.mobile-search-form {
+  display: none;
+  width: 100%;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  position: relative;
+}
+.mobile-search-form .search-input {
+  width: 100%;
+  padding: 10px 15px 10px 45px;
+  border: none;
+  border-radius: 62px;
+  background-color: var(--color-greybg);
+  font-size: var(--font-size-body);
+  box-sizing: border-box;
+}
+.mobile-search-form .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1.1rem;
+}
+
+/* When checkbox is checked, show the mobile search (needs input immediately before form) */
+#search-toggle:checked + .mobile-search-form {
+  display: block;
+}
+
+/* Show/hide helper rules per screen size */
+@media (max-width: 768px) {
+  /* hide desktop search on small screens */
+  .search-form {
+    display: none !important;
+  }
+  /* show the search label/icon on mobile */
+  .search-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+  }
+}
+@media (min-width: 769px) {
+  /* ensure mobile search toggle and form are hidden on desktop */
+  .search-toggle-label {
+    display: none !important;
+  }
+  .mobile-search-form {
+    display: none !important;
+  }
+}
 .home-section {
   background-color: var(--color-h1-background);
   margin: 0;
@@ -634,7 +738,7 @@ footer .newsletter-wrapper::after {
   left: 0;
   width: 100%;
   height: 50%;
-  background-color: #f8f9fa;
+  background-color: var(--color-greybg);
   z-index: 0;
 }
 footer .newsletter-wrapper .newsletter {
@@ -692,6 +796,12 @@ footer .newsletter-wrapper .newsletter button {
     width: 100%;
   }
 }
+footer {
+  background-color: var(--color-greybg);
+}
+footer .bottom-strip {
+  background-color: var(--color-greybg);
+}
 footer ul li {
   margin-bottom: 0.5rem;
 }
@@ -701,7 +811,7 @@ footer .bi {
   color: var(--color-black);
 }
 footer .icon-container {
-  border: 1px solid #ddd;
+  border: 1px solid #D6DCE5;
   border-radius: 8px;
   padding: 4px 8px;
   display: flex;

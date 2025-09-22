@@ -22,7 +22,7 @@ footer {
             left: 0;
             width: 100%;
             height: 50%; // bottom half
-            background-color: #f8f9fa; // Bootstrap bg-light
+            background-color: var(--color-greybg);
             z-index: 0;
         }
 
@@ -104,6 +104,10 @@ footer {
         }
     }
 
+    background-color: var(--color-greybg);
+    .bottom-strip{
+        background-color: var(--color-greybg);
+    }
     ul li {
         margin-bottom: 0.5rem;
     }
@@ -115,7 +119,7 @@ footer {
     }
 
     .icon-container {
-        border: 1px solid #ddd;
+        border: 1px solid #D6DCE5;
         border-radius: 8px;
         padding: 4px 8px;
         display: flex;

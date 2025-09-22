@@ -5,11 +5,17 @@
     button.btn-close.btn-close-white.float-end.me-3(aria-label="Close")
 
 // Navbar
-nav.navbar.navbar-expand-sm.bg-white.container-fluid
+nav.navbar.navbar-expand-md.bg-white.container-fluid
     // Brand with toggler (hamburger)
-    button.navbar-toggler.border-0(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav")
-        i.bi.bi-list.fs-3
-    a.navbar-brand.fw-bold.ms-2(href="#") SHOP.CO
+    //- button.navbar-toggler.border-0(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav")
+    //-     i.bi.bi-list.fs-3
+    //- a.navbar-brand.fw-bold.ms-2(href="#") SHOP.CO
+    // Brand with toggler (hamburger)
+    .div.d-flex.align-items-center
+        button.navbar-toggler.border-0(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav")
+            i.bi.bi-list.fs-3
+        a.navbar-brand.fw-bold.ms-2(href="index.html") SHOP.CO
+
 
 
 
@@ -35,15 +41,25 @@ nav.navbar.navbar-expand-sm.bg-white.container-fluid
         i.bi.bi-search.search-icon
         input.search-input(type="search" placeholder="Search for products..." name="search" aria-label="Search")
 
-    
+    // --------- CSS-only search toggle ----------
+    // Hidden checkbox (must be BEFORE mobile-search-form)
+    input#search-toggle.visually-hidden(type="checkbox" aria-hidden="true")
+
+    // Mobile search that appears when checkbox is checked
+    form.mobile-search-form(role="search")
+        i.bi.bi-search.search-icon
+        input.search-input(type="search" placeholder="Search for products..." name="search_mobile" aria-label="Search")
+
     // Right icons
     .d-flex.ms-3
-        a.nav-link.px-2.d-sm-none(href="#")
+        //- a.nav-link.d-sm-none(href="#")
+        //-     img.nav-icon(src="assets/images/search-icon.svg" alt="Search")
+        label.search-toggle-label.nav-link.d-md-none(for="search-toggle" aria-label="Open search" title="Open search")
             img.nav-icon(src="assets/images/search-icon.svg" alt="Search")
-        a.nav-link.px-2(href="cart.html")
+        a.nav-link(href="cart.html")
             img.nav-icon(src="assets/images/cart-icon.svg" alt="Cart")
-        a.nav-link.px-2(href="#")
+        a.nav-link(href="#")
             img.nav-icon(src="assets/images/profile-icon.svg" alt="Profile")
 
-
+    
     
