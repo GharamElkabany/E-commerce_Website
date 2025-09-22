@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-commerce</title>
+    <title>One Life Graphic T-Shirt | Shop Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
@@ -11,6 +11,49 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <nav>hello</nav>
+    <!-- Top black strip-->
+    <div class="top-strip bg-dark text-center text-white py-1">
+       Sign up and get 20% off to your first order. <a class="text-white" href="#">Sign Up Now</a>
+      <button class="btn-close btn-close-white float-end me-3" aria-label="Close"></button>
+    </div>
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-md bg-white container-fluid">
+      <!-- Brand with toggler (hamburger)-->
+      <!-- Brand with toggler (hamburger)-->
+      <div class="div d-flex align-items-center">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><i class="bi bi-list fs-3"></i></button><a class="navbar-brand fw-bold ms-2" href="index.html">SHOP.CO</a>
+      </div>
+      <!-- Collapsible menu-->
+      <div class="collapse navbar-collapse mt-lg-0" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown ms-md-3 ms-lg-5 ms-sm-0"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Shop</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Men</a></li>
+              <li><a class="dropdown-item" href="#">Women</a></li>
+              <li><a class="dropdown-item" href="#">Kids</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">On Sale</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+        </ul>
+      </div>
+      <!-- Search bar visible only in desktop-->
+      <!-- Search bar-->
+      <form class="search-form d-none d-sm-flex mx-auto" role="search"><i class="bi bi-search search-icon"></i>
+        <input class="search-input" type="search" placeholder="Search for products..." name="search" aria-label="Search">
+      </form>
+      <!-- --------- CSS-only search toggle ------------>
+      <!-- Hidden checkbox (must be BEFORE mobile-search-form)-->
+      <input class="visually-hidden" id="search-toggle" type="checkbox" aria-hidden="true">
+      <!-- Mobile search that appears when checkbox is checked-->
+      <form class="mobile-search-form" role="search"><i class="bi bi-search search-icon"></i>
+        <input class="search-input" type="search" placeholder="Search for products..." name="search_mobile" aria-label="Search">
+      </form>
+      <!-- Right icons-->
+      <div class="d-flex ms-3">
+        <label class="search-toggle-label nav-link d-md-none" for="search-toggle" aria-label="Open search" title="Open search"><img class="nav-icon" src="assets/images/search-icon.svg" alt="Search"></label><a class="nav-link" href="cart.html"><img class="nav-icon" src="assets/images/cart-icon.svg" alt="Cart"></a><a class="nav-link" href="#"><img class="nav-icon" src="assets/images/profile-icon.svg" alt="Profile"></a>
+      </div>
+    </nav>
   </body>
 </html>
