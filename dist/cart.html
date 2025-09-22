@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-commerce</title>
+    <title>Your Cart | Shop Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
@@ -19,9 +19,12 @@
       <button class="btn-close btn-close-white float-end me-3" aria-label="Close"></button>
     </div>
     <!-- Navbar-->
-    <nav class="navbar navbar-expand-sm bg-white container-fluid">
+    <nav class="navbar navbar-expand-md bg-white container-fluid">
       <!-- Brand with toggler (hamburger)-->
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><i class="bi bi-list fs-3"></i></button><a class="navbar-brand fw-bold ms-2" href="#">SHOP.CO</a>
+      <!-- Brand with toggler (hamburger)-->
+      <div class="div d-flex align-items-center">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><i class="bi bi-list fs-3"></i></button><a class="navbar-brand fw-bold ms-2" href="index.html">SHOP.CO</a>
+      </div>
       <!-- Collapsible menu-->
       <div class="collapse navbar-collapse mt-lg-0" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -42,15 +45,24 @@
       <form class="search-form d-none d-sm-flex mx-auto" role="search"><i class="bi bi-search search-icon"></i>
         <input class="search-input" type="search" placeholder="Search for products..." name="search" aria-label="Search">
       </form>
+      <!-- --------- CSS-only search toggle ------------>
+      <!-- Hidden checkbox (must be BEFORE mobile-search-form)-->
+      <input class="visually-hidden" id="search-toggle" type="checkbox" aria-hidden="true">
+      <!-- Mobile search that appears when checkbox is checked-->
+      <form class="mobile-search-form" role="search"><i class="bi bi-search search-icon"></i>
+        <input class="search-input" type="search" placeholder="Search for products..." name="search_mobile" aria-label="Search">
+      </form>
       <!-- Right icons-->
-      <div class="d-flex ms-3"><a class="nav-link px-2 d-sm-none" href="#"><img class="nav-icon" src="assets/images/search-icon.svg" alt="Search"></a><a class="nav-link px-2" href="cart.html"><img class="nav-icon" src="assets/images/cart-icon.svg" alt="Cart"></a><a class="nav-link px-2" href="#"><img class="nav-icon" src="assets/images/profile-icon.svg" alt="Profile"></a></div>
+      <div class="d-flex ms-3">
+        <label class="search-toggle-label nav-link d-md-none" for="search-toggle" aria-label="Open search" title="Open search"><img class="nav-icon" src="assets/images/search-icon.svg" alt="Search"></label><a class="nav-link" href="cart.html"><img class="nav-icon" src="assets/images/cart-icon.svg" alt="Cart"></a><a class="nav-link" href="#"><img class="nav-icon" src="assets/images/profile-icon.svg" alt="Profile"></a>
+      </div>
     </nav>
     <!-- Main content-->
     <main class="container my-5">
       <!-- Breadcrumb-->
       <nav class="mb-4" aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a class="text-decoration-none text-muted" href="#">Home</a></li>
+          <li class="breadcrumb-item"><a class="text-decoration-none text-muted" href="index.html">Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">Cart</li>
         </ol>
       </nav>
@@ -142,7 +154,7 @@
         </div>
       </div>
       <!-- Main footer content-->
-      <div class="bg-light py-5">
+      <div class="py-5">
         <div class="container">
           <div class="row d-flex justify-content-between">
             <!-- Left column-->
@@ -194,7 +206,7 @@
           </div>
         </div>
         <!-- Bottom strip-->
-        <div class="container-fluid bg-light border-top py-3">
+        <div class="bottom-strip container-fluid border-top py-3">
           <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center"><small class="text-muted">Shop.co © 2000-2023, All Rights Reserved</small>
             <div class="d-flex gap-2 mt-2 mt-lg-0 w-30"><a class="icon-container" href="#"><img src="assets/images/Visa.svg" alt="Visa"></a><a class="icon-container" href="#"><img src="assets/images/Mastercard.svg" alt="Mastercard"></a><a class="icon-container" href="#"><img src="assets/images/Paypal.svg" alt="Paypal"></a><a class="icon-container" href="#"><img src="assets/images/Pay.svg" alt="Apple Pay"></a><a class="icon-container" href="#"><img src="assets/images/G-Pay.svg" alt="Google Pay"></a></div>
           </div>
