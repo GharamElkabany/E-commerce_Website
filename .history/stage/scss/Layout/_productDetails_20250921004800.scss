@@ -1,0 +1,9 @@
+%paddingANDmargin {
+  padding: 20px 5%;
+  
+}
+
+ol.breadcrumb.product{
+  @extend .breadcrumb; // pulls in existing styles
+  @extend %paddingANDmargin;
+}

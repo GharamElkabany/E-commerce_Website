@@ -1,0 +1,8 @@
+%paddingANDmargin {
+  padding: 20px 5%;
+  
+}
+
+body .breadcrumb {
+  @extend %paddingANDmargin ;
+}
