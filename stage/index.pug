@@ -18,7 +18,7 @@ html(lang="en")
         // home-section
         .container-fluid.home-section.pt-5
             .row.d-flex.justify-content-between
-                .col-11.col-xl-5.mx-5.px-5
+                .col-11.col-xl-5.px-5
                     .row.row-col-1
                         h1 FIND CLOTHES THAT MATCHES YOUR STYLE
                     .row.row-col-1.pe-lg-5
@@ -64,7 +64,7 @@ html(lang="en")
             .container
                 .row
                     .col-12.text-center
-                        h2.text-center new arrivals
+                        h2.section-title.text-center new arrivals
 
                 .row.justify-content-between.mt-4
                     .scroll-container.d-flex.justify-content-between 
@@ -132,7 +132,7 @@ html(lang="en")
             .container
                 .row
                     .col-12.text-center
-                        h2.text-center top selling
+                        h2.section-title.text-center top selling
 
                 .row.justify-content-between.mt-4
                     .scroll-container.d-flex.justify-content-between 
@@ -195,7 +195,34 @@ html(lang="en")
                         
 
 
-        //- dress-style-section
+        // dress-style-section
+        .styles-container
+            .container
+                .row
+                    .col-12.text-center
+                        h2.section-title.text-center browse by dress style
+                .row.g-3.mt-3
+                    .col-12.col-md-6.col-lg-4 
+                        .style 
+                            a(href="category.html") 
+                                img(src="./assets/images/Casual.svg", alt="casual")
+                                h3 Casual
+                    .col-12.col-md-6.col-lg-8
+                        .style 
+                            a(href="category.html")
+                                img(src="./assets/images/Formal.svg", alt="formal")
+                                h3 Formal
+                
+                    .col-12.col-md-6.col-lg-8 
+                        .style 
+                            a(href="category.html")
+                                img(src="./assets/images/Party.svg", alt="party")
+                                h3 Party
+                    .col-12.col-md-6.col-lg-4
+                        .style 
+                            a(href="category.html")
+                                img(src="./assets/images/Gym.svg", alt="gym")
+                                h3 Gym
 
 
         //- customers-section
