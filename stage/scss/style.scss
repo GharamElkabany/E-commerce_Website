@@ -3,7 +3,9 @@
 @use './global/global';
 @use './Layout/nav';
 @use './Layout/home';
+@use './Layout/productDetails';
 @use './Layout/category';
 @use './Layout/cart';
-@use './Layout/productDetails';
+@use './helpers/productCard';
+@use './helpers/reviewCard';
 @use './Layout/footer';

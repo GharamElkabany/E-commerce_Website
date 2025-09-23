@@ -2,12 +2,14 @@
 // $primary-white: #fff;
 // $border-color: #eaeaea;
 
-// @font-face {
-// 	font-family: 'Integral CF';
-// 	src: url('../fonts/IntegralCF.woff2') format('woff2'),
-// 		url('../fonts/IntegralCF.woff') format('woff');
-// 	font-weight: normal;
-// 	font-style: normal;
+// *,
+// *::before,
+// *::after {
+// 	box-sizing: border-box;
+// 	// overflow-x: hidden;
+// 	@media (max-width: 993px) {
+// 		overflow-x: hidden;
+// 	}
 // }
 
 .top-strip {
@@ -40,10 +42,14 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
+	max-width: 1200px; // or any container width you want
+	margin: 0 auto; // centers without overflow
+	padding: 20px; // keeps inner spacing
 	overflow-x: hidden;
 	// flex-wrap: wrap;
 	overflow: visible;
 
+	// outline: 1px solid red;
 	&::after {
 		content: "";
 		display: block;
@@ -54,6 +60,7 @@
 		height: 1px;
 		background: #eaeaea;
 		margin: 0 5%; // matches navbar padding
+
 		z-index: 10;
 	}
 
@@ -113,7 +120,7 @@
 
 	.nav-link {
 		font-size: 1rem;
-		margin-right: 15px;
+		margin-right: 1rem;
 		color: var(--color-black);
 		white-space: nowrap;
 
@@ -140,14 +147,26 @@
 		}
 	}
 
-
 	// Hide desktop search bar in mobile
-	@media (max-width: 576px) {
-		margin: 0 20px;
+	@media (max-width: 770px) {
+		overflow-x: hidden;
+		// margin: 0 20px;
+		// margin-left: 20px;
 		padding: 20px 0;
 		font-size: 25px;
-		gap: 0;
-		justify-content: space-evenly;
+		// gap: 5px;
+		justify-content: space-between;
+		overflow-x: hidden;
+		box-sizing: border-box; // Ensure it doesn’t exceed the width
+
+		// outline: 1px solid red;
+		// flex-wrap: nowrap;
+		&::after {
+			margin-left: auto;
+			margin-right: auto;
+			width: 90%;
+		}
+
 		.navbar-brand {
 			font-size: 25px;
 			// margin-right: 0;
@@ -162,5 +181,107 @@
 			display: flex; // show icons on the right
 			margin-left: auto;
 		}
+
+		.navbar-nav .nav-item {
+			display: inline-block;
+			/* shrink-wrap to content */
+			width: auto;
+			/* no forced width */
+			margin: 0;
+			/* reset Bootstrap margins if any */
+			width: 50%;
+		}
+
+		.navbar-nav .nav-link {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		/* ✅ Mobile dropdown fix */
+		.navbar-nav .dropdown-menu {
+			position: static !important; // inline instead of absolute
+			float: none !important;
+			box-shadow: none;
+			max-height: none !important;
+			overflow: visible !important;
+			padding-left: 1rem;
+		}
+
+		#navbarNav {
+			overflow: visible !important;
+		}
 	}
+}
+
+
+/* visually-hidden (keeps element accessible/clickable) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Mobile search form (hidden by default) */
+.mobile-search-form {
+  display: none;
+  width: 100%;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  position: relative;
+
+  .search-input {
+    width: 100%;
+    padding: 10px 15px 10px 45px;
+    border: none;
+    border-radius: 62px;
+    background-color: var(--color-greybg);
+    font-size: var(--font-size-body);
+    box-sizing: border-box;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 1.1rem;
+  }
+}
+
+/* When checkbox is checked, show the mobile search (needs input immediately before form) */
+#search-toggle:checked + .mobile-search-form {
+  display: block;
+}
+
+/* Show/hide helper rules per screen size */
+@media (max-width: 768px) {
+  /* hide desktop search on small screens */
+  .search-form {
+    display: none !important;
+  }
+
+  /* show the search label/icon on mobile */
+  .search-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+  }
+}
+
+@media (min-width: 769px) {
+  /* ensure mobile search toggle and form are hidden on desktop */
+  .search-toggle-label {
+    display: none !important;
+  }
+  .mobile-search-form {
+    display: none !important;
+  }
 }
