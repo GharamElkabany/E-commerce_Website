@@ -1,16 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-commerce</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <nav>hello</nav>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-commerce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet">
+  <!-- link(rel="stylesheet", href="./css/bootstrap.min.css")-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav>nav place</nav>
+  <hr>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-3">
+        <form class="py-3 px-1 border rounded-4">
+          <!-- Filter header-->
+          <div class="d-flex align-items-center justify-content-between mb-3 mx-3 border-bottom pb-4">
+            <h4 class="mb-0">Filters</h4><img src="./assets/icons/filter-icon.svg" alt="Filter">
+            <!-- button.btn.btn-light.p-1-->
+            <!--   img(src="./assets/icons/filter-icon.svg", alt="Filter", width="20", height="20")-->
+          </div>
+          <div class="mb-4 pb-2 mx-3 border-bottom">
+            <ul class="list-group filter-category-list list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center py-1 px-0">T-shirts<img
+                  src="./assets/icons/right-arrow.svg" alt="&gt;"></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center py-1 px-0">Shorts<img
+                  src="./assets/icons/right-arrow.svg" alt="&gt;"></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center py-1 px-0">Shirts<img
+                  src="./assets/icons/right-arrow.svg" alt="&gt;"></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center py-1 px-0">Hoodie<img
+                  src="./assets/icons/right-arrow.svg" alt="&gt;"></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center py-1 px-0">Jeans<img
+                  src="./assets/icons/right-arrow.svg" alt="&gt;"></li>
+            </ul>
+          </div><!-- Price-->
+          <div class="d-flex justify-content-between align-items-center mt-2 mb-3 px-3">
+            <h4 class="mb-0">Price</h4><button class="btn p-0 border-0 bg-transparent" type="button"
+              data-bs-toggle="collapse" data-bs-target="#priceCollapse" aria-expanded="true"
+              aria-controls="priceCollapse"><img src="./assets/icons/down-arrow.svg" alt="v"></button>
+          </div><!-- Price Content-->
+          <div class="collapse show mb-4 mx-3 border-bottom pb-2" id="priceCollapse"><input class="form-range mb-2"
+              id="priceRange" type="range" min="50" max="1000" value="60" step="10">
+            <div class="d-flex justify-content-center">
+              <p class="text-muted">From <span>$50 </span>to <span>$</span><output id="rangeValue" for="priceRange"
+                  aria-hidden="true"></output></p>
+            </div>
+          </div><!-- Color-->
+          <div class="d-flex justify-content-between align-items-center mb-3 px-3">
+            <h4 class="mb-0">Colors</h4><button class="btn p-0 border-0 bg-transparent" type="button"
+              data-bs-toggle="collapse" data-bs-target="#colorCollapse" aria-expanded="true"
+              aria-controls="colorCollapse"><img src="./assets/icons/down-arrow.svg" alt="v"></button>
+          </div><!-- Color Content-->
+          <div class="collapse show mb-4 mx-3 border-bottom pb-3" id="colorCollapse">
+            <div class="d-flex flex-wrap gap-2">
+              <div class="rounded-circle border color-circles" style="background:var(--color-green);"></div>
+              <div class="rounded-circle border color-circles" style="background:var(--color-red);"></div>
+              <div class="rounded-circle border color-circles" style="background:var(--color-yellow);"></div>
+              <div class="rounded-circle border color-circles" style="background:var(--color-orange);"></div>
+              <div class="rounded-circle border color-circles" style="background:var(--color-cyan);"></div>
+              <div class="rounded-circle border color-circles" style="background:var(--color-blue);"></div>
+              <div class="rounded-circle border color-circles" style="background:var(--color-violet);"></div>
+              <div class="rounded-circle border color-circles" style="background:var(--color-pink);"></div>
+              <div class="rounded-circle border color-circles" style="background:var(--color-white);"></div>
+              <div class="rounded-circle border color-circles" style="background:var(--color-black);"></div>
+            </div>
+          </div><!-- Size-->
+          <div class="d-flex justify-content-between align-items-center mb-3 px-3">
+            <h4 class="mb-0">Size</h4><button class="btn p-0 border-0 bg-transparent" type="button"
+              data-bs-toggle="collapse" data-bs-target="#sizeCollapse" aria-expanded="true"
+              aria-controls="sizeCollapse"><img src="./assets/icons/down-arrow.svg" alt="v"></button>
+          </div><!-- Sizes Content-->
+          <div class="collapse show mb-4 mx-3 border-bottom pb-3" id="sizeCollapse">
+            <div class="d-flex flex-wrap gap-2"><button class="btn btn-secondary size-btn py-2 px-3 rounded-5"
+                type="button">XX-Small</button><button class="btn btn-secondary size-btn py-2 px-3 rounded-5"
+                type="button">X-Small</button><button class="btn btn-secondary size-btn py-2 px-3 rounded-5"
+                type="button">Small</button><button class="btn btn-secondary size-btn py-2 px-3 rounded-5"
+                type="button">Medium</button><button class="btn btn-secondary size-btn py-2 px-3 rounded-5"
+                type="button">Large</button><button class="btn btn-secondary size-btn py-2 px-3 rounded-5"
+                type="button">X-Large</button><button class="btn btn-secondary size-btn py-2 px-3 rounded-5"
+                type="button">XX-Large</button><button class="btn btn-secondary size-btn py-2 px-3 rounded-5"
+                type="button">3X-Large</button><button class="btn btn-secondary size-btn py-2 px-3 rounded-5"
+                type="button">4X-Large</button></div>
+          </div><!-- Dress style header-->
+          <div class="d-flex align-items-center justify-content-between mb-2 px-3">
+            <h4 class="mb-0">Dress Style</h4><button class="btn p-0 border-0 bg-transparent" type="button"
+              data-bs-toggle="collapse" data-bs-target="#dressStyleCollapse" aria-expanded="true"
+              aria-controls="dressStyleCollapse"><img src="./assets/icons/down-arrow.svg" alt="v"></button>
+          </div><!-- Dress style content-->
+          <div class="collapse show mb-2 mx-3" id="dressStyleCollapse">
+            <ul class="list-group filter-category-list list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center py-1 px-0">Casual<img
+                  src="./assets/icons/right-arrow.svg" alt="&gt;"></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center py-1 px-0">Formal<img
+                  src="./assets/icons/right-arrow.svg" alt="&gt;"></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center py-1 px-0">Party<img
+                  src="./assets/icons/right-arrow.svg" alt="&gt;"></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center py-1 px-0">Gym<img
+                  src="./assets/icons/right-arrow.svg" alt="&gt;"></li>
+            </ul>
+          </div><!-- Apply filter button-->
+          <div class="d-flex justify-content-center mx-3"><button class="btn btn-dark bg-black rounded-5 w-100 p-2 my-2"
+              type="button">Apply Filter</button></div>
+        </form>
+      </div><!-- Products area-->
+      <div class="col-9">
+        <!-- .d-flex.align-items-center.justify-content-between.mb-3-->
+        <!--   h4.mb-0 Casual-->
+        <!--   i.bi.bi-sliders // Bootstrap icon-->
+      </div>
+    </div>
+  </div>
+  <script>
+    // Script for range input in price section in the filter
+    const rangeInput = document.getElementById('priceRange');
+    const rangeOutput = document.getElementById('rangeValue');
+
+    rangeOutput.textContent = rangeInput.value;
+
+    rangeInput.addEventListener('input', function () {
+      rangeOutput.textContent = this.value;
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

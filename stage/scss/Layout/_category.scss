@@ -1,0 +1,97 @@
+body {
+    // background-color: rgb(149, 149, 199);
+    font-family: var(--font-family-body);
+}
+
+form {
+    border: 1px solid var(--color-grey-border);
+
+}
+
+form h4 {
+    font-family: "Poppins", sans-serif;
+    // font-weight: var(--font-weight-bold); 
+    font-weight: 600;
+    font-size: var(--font-size-h4);
+}
+
+/* Remove background highlight */
+.list-group-item {
+    color: var(--color-darkergrey-p) !important;
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    cursor: pointer;  
+    transition: all 0.1s ease-in; 
+} 
+
+/* Change text + arrow color on hover */
+.list-group-item:hover {   
+    color:rgb(110, 60, 180) !important; 
+} 
+
+// .list-group-item img { 
+//     transition: all 0.1s ease;   
+// } 
+
+// .list-group-item:hover img {
+//     filter:brightness(10%);  
+  
+// }
+ 
+
+.filter-category-list li {
+    border: none;
+}
+ 
+//chatgpt for black
+// input[type="range"] {
+//   accent-color: black; /* modern browsers (quick way) */
+// }
+
+
+input[type="range"]::-webkit-slider-thumb {
+    background: #000;
+    border: 2px solid #fff;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+//chatgpt for black
+p span,output{
+    color: var(--color-black);  
+    font-weight:600;    
+    font-size: var(--font-size-small); 
+}
+
+
+// /   ///   / // /  ///  /  ///
+.color-circles {
+    width: 37px;
+    height: 37px;
+    border: 2px solid #00000033 !important;
+}
+.color-circles:hover{
+    
+}
+.size-btn {
+    // border-color: var(--color-grey-border); 
+    border: none;
+    font-size: var(--font-size-categorypage-buttons-text);
+    background-color: var(--color-greybg-pagenum);
+    color: var(--color-darkergrey-p);
+    padding: 10px 20px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.size-btn:hover,
+.size-btn:focus,
+.size-btn.active {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+// sass --watch stage/scss/style.scss:dist/css/style.css 
