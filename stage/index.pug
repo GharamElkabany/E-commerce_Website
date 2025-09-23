@@ -3,7 +3,27 @@ html(lang="en")
     head
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+        // Primary SEO
         title Shop Store
+        meta(name="description" content="Shop Store offers the latest fashion clothing for men, women, and kids. Discover trendy shirts, pants, dresses, jackets, and more at affordable prices.")
+        meta(name="keywords" content="clothing store, fashion, online shopping, men's clothes, women's clothes, kids clothing, shirts, dresses, jackets, pants, shop store")
+        meta(name="author" content="Shop Store Team")
+
+        // Open Graph / Facebook
+        meta(property="og:title" content="Shop Store | Fashion Clothing for Men, Women & Kids")
+        meta(property="og:description" content="Shop Store offers the latest fashion clothing for men, women, and kids. Discover trendy shirts, pants, dresses, jackets, and more at affordable prices.")
+        meta(property="og:type" content="website")
+        meta(property="og:url" content="http://localhost:3000/dist/index.html") 
+        meta(property="og:image" content="assets/images/trendy-fashionable-couple-posing.svg") 
+
+        // Twitter Card
+        meta(name="twitter:card" content="summary_large_image")
+        meta(name="twitter:title" content="Shop Store | Fashion Clothing for Men, Women & Kids")
+        meta(name="twitter:description" content="Shop Store offers the latest fashion clothing for men, women, and kids. Discover trendy shirts, pants, dresses, jackets, and more at affordable prices.")
+        meta(name="twitter:image" content="assets/images/trendy-fashionable-couple-posing.svg")
+
+        // Fonts & Styles
         link(rel='preconnect' href='https://fonts.googleapis.com')
         link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
         link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
@@ -12,6 +32,7 @@ html(lang="en")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css")
         link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
         link(rel='stylesheet' href='css/style.css')
+
     body
         //- navbar
         include ./pug/layout/nav.pug
