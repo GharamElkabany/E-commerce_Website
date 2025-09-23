@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title e-commerce
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
+        link(href='https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap' rel='stylesheet')
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css")
+        link(rel='stylesheet' href='css/style.css')
+    body
+        include ./pug/layout/nav.pug
+
+        ol.breadcrumb.product
+            li.breadcrumb-item
+                a.text-decoration-none.text-muted(href="#") Home
+            li.breadcrumb-item
+                a.text-decoration-none.text-muted(href="#") Shop
+            li.breadcrumb-item
+                a.text-decoration-none.text-muted(href="#") Men
+            li.breadcrumb-item.active(aria-current="page") T-shirts
+    // Product Section
+    .container
+        .row.g-5
+            // Left column: Gallery
+            .col-lg-6.d-flex.gallery
+                // Thumbnails
+                .thumbnails.d-flex.flex-lg-column.flex-row.gap-2.me-3
+                    img.image-thumbnail.active(src="./assets/images/One-Life-Graphic-T-shirt-1.svg" alt="Thumb1" )
+                    img.imag-thumbnail(src="./assets/images/One-Life-Graphic-T-shirt-2.svg" alt="Thumb2")
+                    img.img-thumbnail(src="./assets/images/One-Life-Graphic-T-shirt-3.svg" alt="thumb3")
+
+
+                // Main image
+                .main-image.flex-grow-1
+                    img.img-fluid.rounded(src="./assets/images/One-Life-Graphic-T-shirt-1.svg" alt="Main")
+            // Right column: Product Info
+            .col-lg-6
+                h1.fw-bold.mb-3 One Life Graphic T-shirt
+                // Rating
+                .d-flex.align-items-center.mb-3
+                    .text-warning.me-2 ★★★★★
+                    small.text-muted (120 reviews)
+                // Price
+                .mb-3
+                    span.fw-bold.fs-3.me-2 $260
+                    span.text-decoration-line-through.text-muted.me-2 $300
+                    span.badge.bg-danger -40%
+                // Description
+                p.text-muted.mb-4
+                    | This graphic t-shirt is perfect for any occasion. Crafted from soft breathable fabric, it offers superior comfort and style.
+                // Colors
+                .mb-4
+                    label.form-label.fw-semibold Colors
+                    br
+                    button.btn.btn-sm.rounded-circle.border.me-2(style="width:35px;height:35px;background:#5c4d3b;")
+                    button.btn.btn-sm.rounded-circle.border.me-2(style="width:35px;height:35px;background:#2e5248;")
+                    button.btn.btn-sm.rounded-circle.border(style="width:35px;height:35px;background:#26294d;")
+                // Sizes
+                .mb-4
+                    label.form-label.fw-semibold Size
+                    br
+                    .btn-group(role="group")
+                        button.btn.btn-outline-secondary(type="button") S
+                        button.btn.btn-outline-secondary(type="button") M
+                        button.btn.btn-dark(type="button") L
+                        button.btn.btn-outline-secondary(type="button") XL
+                // Quantity + Cart
+                .d-flex.align-items-center.gap-3
+                    .input-group(style="width:140px;")
+                        button.btn.btn-outline-secondary -
+                        input.form-control.text-center(type="text" value="1")
+                        button.btn.btn-outline-secondary +
+                    button.btn.btn-dark.flex-grow-1 Add to Cart
+
+
+
+                    //-footer
+    include ./pug/layout/footer.pug
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js")

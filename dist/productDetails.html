@@ -45,9 +45,9 @@
       <div class="d-flex ms-3"><a class="nav-link px-2 d-sm-none" href="#"><img class="nav-icon" src="assets/images/search-icon.svg" alt="Search"></a><a class="nav-link px-2" href="cart.html"><img class="nav-icon" src="assets/images/cart-icon.svg" alt="Cart"></a><a class="nav-link px-2" href="#"><img class="nav-icon" src="assets/images/profile-icon.svg" alt="Profile"></a></div>
     </nav>
     <ol class="breadcrumb product">
-      <li class="breadcrumb-item"><a class="text-decoration-none text-muted" href="#">Home</a></li>
+      <li class="breadcrumb-item"><a class="text-decoration-none text-muted" href="index.html">Home</a></li>
       <li class="breadcrumb-item"><a class="text-decoration-none text-muted" href="#">Shop</a></li>
-      <li class="breadcrumb-item"><a class="text-decoration-none text-muted" href="#">Men</a></li>
+      <li class="breadcrumb-item"><a class="text-decoration-none text-muted" href="category.html">Men</a></li>
       <li class="breadcrumb-item active" aria-current="page">T-shirts</li>
     </ol>
   </body>
@@ -64,41 +64,40 @@
         </div>
       </div>
       <!-- Right column: Product Info-->
-      <div class="col-lg-6">
-        <h1 class="fw-bold mb-3">One Life Graphic T-shirt</h1>
+      <div class="col-lg-6 product-info">
+        <h1 class="product-little fw-bold mb-3">One Life Graphic T-shirt</h1>
         <!-- Rating-->
-        <div class="d-flex align-items-center mb-3">
-          <div class="text-warning me-2">★★★★★</div><small class="text-muted">(120 reviews)</small>
+        <div class="d-flex align-items-center mb-3 product-rating">
+          <div class="stars text-warning me-2">★★★★★</div><small class="review-count text-muted">(120 reviews)</small>
         </div>
         <!-- Price-->
-        <div class="mb-3"><span class="fw-bold fs-3 me-2">$260</span><span class="text-decoration-line-through text-muted me-2">$300</span><span class="badge bg-danger">-40%</span></div>
+        <div class="mb-3"><span class="current-price fw-bold fs-3 me-2">$260</span><span class="old-price text-decoration-line-through text-muted me-2">$300</span><span class="discount badge bg-danger">-40%</span></div>
         <!-- Description-->
-        <p class="text-muted mb-4">This graphic t-shirt is perfect for any occasion. Crafted from soft breathable fabric, it offers superior comfort and style.</p>
+        <p class="text-muted mb-4 product-description">This graphic t-shirt is perfect for any occasion. Crafted from soft breathable fabric, it offers superior comfort and style.</p>
         <!-- Colors-->
-        <div class="mb-4">
-          <label class="form-label fw-semibold">Colors</label><br>
-          <button class="btn btn-sm rounded-circle border me-2" style="width:35px;height:35px;background:#5c4d3b;"></button>
-          <button class="btn btn-sm rounded-circle border me-2" style="width:35px;height:35px;background:#2e5248;"></button>
-          <button class="btn btn-sm rounded-circle border" style="width:35px;height:35px;background:#26294d;"></button>
+        <div class="mb-4 product-colors">
+          <label class="form-label fw-semibold colors-label">Colors</label><br>
+          <button class="btn btn-sm rounded-circle border me-2 color-option brow" style="width:35px;height:35px;background:#5c4d3b;"></button>
+          <button class="btn btn-sm rounded-circle border me-2 color-option green" style="width:35px;height:35px;background:#2e5248;"></button>
+          <button class="btn btn-sm rounded-circle border color-option navy" style="width:35px;height:35px;background:#26294d;"></button>
         </div>
         <!-- Sizes-->
-        <div class="mb-4">
-          <label class="form-label fw-semibold">Size</label><br>
-          <div class="btn-group" role="group">
-            <button class="btn btn-outline-secondary" type="button">S</button>
-            <button class="btn btn-outline-secondary" type="button">M</button>
-            <button class="btn btn-dark" type="button">L</button>
-            <button class="btn btn-outline-secondary" type="button">XL</button>
+        <div class="product-sizes mb-4">
+          <label class="form-label fw-semibold sizes-label">Size</label><br>
+          <div class="btn-group size-options" role="group">
+            <button class="size-button btn btn-outline-secondary" type="button" style="margin:5px;border-radius:20px;background-color: #F0F0F0;border: #F0F0F0">S</button>
+            <button class="size-button btn btn-outline-secondary" type="button" style="margin:5px;border-radius:20px;background-color: #F0F0F0;border: #F0F0F0">M</button>
+            <button class="size-button btn btn-dark" type="button" style="margin:5px;border-radius:10px;background-color: #F0F0F0;border: #F0F0F0">L</button>
+            <button class="size-button btn btn-outline-secondary" type="button" style="margin:5px;border-radius:20px;background-color: #F0F0F0;border: #F0F0F0">XL</button>
           </div>
         </div>
         <!-- Quantity + Cart-->
-        <div class="d-flex align-items-center gap-3">
-          <div class="input-group" style="width:140px;">
-            <button class="btn btn-outline-secondary">-</button>
-            <input class="form-control text-center" type="text" value="1">
-            <button class="btn btn-outline-secondary">+</button>
-          </div>
-          <button class="btn btn-dark flex-grow-1">Add to Cart</button>
+        <div class="d-flex align-items-center gap-3 product-actions">
+          <div class="input-group quantity-wrapper rounded-pill overflow-hidden" style="width:160px;">
+            <button class="btn btn-outline-secondary quantity-btn" type="button">-</button>
+            <input class="form-control text-center border-0" type="text" value="1" style="border:none; outline:none; box-shadow:none">
+            <button class="btn btn-outline-secondary quantity-btn" type="button" style="min-width:40px; border:none;">+</button>
+          </div><a class="add-to-cart btn btn-dark flex-grow-1" href="cart.html" style="border-radius:20px; padding:10px 20px;">Add to Cart</a>
         </div>
       </div>
     </div>
@@ -218,50 +217,50 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-outline-dark btn-sm">Load More Reviews</button>
+            </div>
+            <div class="button-wrapper text-center"> 
+              <button class="load-more-btn btn-outline-dark btn-sm">Load More Reviews</button>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- You Might Also Like Section-->
-    <div class="row mt-5 mb-5">
+    <div class="row mt-3 mb-3">
       <div class="col-12">
         <h2 class="text-center mb-4 fw-bold">YOU MIGHT ALSO LIKE</h2>
         <div class="scroll-wrapper">
-          <div class="row g-4 flex-nowrap">
-            <div class="row g-4">
-              <div class="col-lg-3">
-                <div class="product-card text-center">
-                  <div class="product-image mb-3 position-relative"><img class="img-fluid rounded" src="./assets/images/Polo-with-Contrast-Trims.svg" alt="Polo with Contrast Trim" style="height:100%;width:100%;object-fit:cover;"></div>
-                  <h6 class="fw-semibold mb-2">Polo with Contrast Trim</h6>
-                  <div class="rating text-warning small mb-2">★★★★☆ 4.0/5</div>
-                  <div class="price"><span class="fw-bold me-2">$212</span><span class="text-decoration-line-through text-muted me-2">$242</span><span class="badge bg-danger small">-20%</span></div>
-                </div>
+          <div class="row g-0 flex-nowrap">
+            <div class="col-lg-3">
+              <div class="product-card">
+                <div class="product-image mb-3 position-relative"><img class="img-fluid rounded" src="./assets/images/Polo-with-Contrast-Trims.svg" alt="Polo with Contrast Trim" style="object-fit:cover;"></div>
+                <h6 class="fw-semibold mb-2">Polo with Contrast Trim</h6>
+                <div class="rating text-warning small mb-2">★★★★☆ 4.0/5</div>
+                <div class="price"><span class="fw-bold me-2">$212</span><span class="text-decoration-line-through text-muted me-2">$242</span><span class="badge bg-danger small">-20%</span></div>
               </div>
-              <div class="col-lg-3">
-                <div class="product-card text-center">
-                  <div class="product-image mb-3 position-relative"><img class="img-fluid rounded" src="./assets/images/Gradient-Graphic-T-shirt.svg" alt="Gradient Graphic T-shirt" style="height:100%;width:100%;object-fit:cover;"></div>
-                  <h6 class="fw-semibold mb-2">Gradient Graphic T-shirt</h6>
-                  <div class="rating text-warning small mb-2">★★★☆☆ 3.5/5</div>
-                  <div class="price"><span class="fw-bold">$145</span></div>
-                </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="product-card">
+                <div class="product-image mb-3 position-relative"><img class="img-fluid rounded" src="./assets/images/Gradient-Graphic-T-shirt.svg" alt="Gradient Graphic T-shirt" style="object-fit:cover;"></div>
+                <h6 class="fw-semibold mb-2">Gradient Graphic T-shirt</h6>
+                <div class="rating text-warning small mb-2">★★★☆☆ 3.5/5</div>
+                <div class="price"><span class="fw-bold">$145</span></div>
               </div>
-              <div class="col-lg-3">
-                <div class="product-card text-center">
-                  <div class="product-image mb-3 position-relative"><img class="img-fluid rounded" src="./assets/images/Polo-with-Tipping-Details.svg" alt="Polo with Tipping Details" style="height:100%;width:100%;object-fit:cover;"></div>
-                  <h6 class="fw-semibold mb-2">Polo with Tipping Details</h6>
-                  <div class="rating text-warning small mb-2">★★★★★ 4.5/5</div>
-                  <div class="price"><span class="fw-bold">$180</span></div>
-                </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="product-card">
+                <div class="product-image mb-3 position-relative"><img class="img-fluid rounded" src="./assets/images/Polo-with-Tipping-Details.svg" alt="Polo with Tipping Details" style="object-fit:cover;"></div>
+                <h6 class="fw-semibold mb-2">Polo with Tipping Details</h6>
+                <div class="rating text-warning small mb-2">★★★★★ 4.5/5</div>
+                <div class="price"><span class="fw-bold">$180</span></div>
               </div>
-              <div class="col-lg-3">
-                <div class="product-card text-center">
-                  <div class="product-image mb-3 position-relative"><img class="img-fluid rounded" src="./assets/images/Black-Striped-T-shirt.svg" alt="Black Striped T-shirt" style="height:100%;width:100%;object-fit:cover;"></div>
-                  <h6 class="fw-semibold mb-2">Black Striped T-shirt</h6>
-                  <div class="rating text-warning small mb-2">★★★★★ 5.0/5</div>
-                  <div class="price"><span class="fw-bold me-2">$120</span><span class="text-decoration-line-through text-muted me-2">$160</span><span class="badge bg-danger small">-30%</span></div>
-                </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="product-card">
+                <div class="product-image mb-3 position-relative"><img class="img-fluid rounded" src="./assets/images/Black-Striped-T-shirt.svg" alt="Black Striped T-shirt" style="object-fit:cover;"></div>
+                <h6 class="fw-semibold mb-2">Black Striped T-shirt</h6>
+                <div class="rating text-warning small mb-2">★★★★★ 5.0/5</div>
+                <div class="price"><span class="fw-bold me-2">$120</span><span class="text-decoration-line-through text-muted me-2">$160</span><span class="badge bg-danger small">-30%</span></div>
               </div>
             </div>
           </div>

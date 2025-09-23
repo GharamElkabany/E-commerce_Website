@@ -1,0 +1,243 @@
+%paddingANDmargin {
+  padding: 20px 5%;
+  
+}
+
+ol.breadcrumb.product{
+  @extend .breadcrumb; // pulls in existing styles
+  @extend %paddingANDmargin;
+}
+.product-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem 5%;
+
+  /* Breadcrumb */
+  .breadcrumb {
+    grid-column: 1 / -1;
+    font-family: "Satoshi", sans-serif;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+
+    a {
+      color: #777;
+      text-decoration: none;
+      margin-right: 0.5rem;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    span {
+      color: #000;
+      font-weight: 500;
+    }
+  }
+
+  /* Gallery */
+  // Gallery
+.gallery {
+  display: flex;
+  gap: 1rem;
+
+  .main-image {
+    flex: 1; // makes it expand more than thumbnails
+    img {
+      width: 100%;
+      border-radius: 12px;
+    }
+  }
+.product {
+  .thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .product-thumbnail {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 0.3rem;
+  cursor: pointer;
+  width: 90px;
+
+  &.active {
+    border-color: #000;
+  }
+
+    img {
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 90px;
+
+      &.active {
+        border-color: #000;
+      }
+    }
+  }
+}
+
+}
+
+
+  /* Product Info */
+  .product-info {
+    h1 {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+
+      .stars {
+        color: #ffc107;
+        font-size: 1.2rem;
+      }
+
+      span {
+        font-size: 0.9rem;
+        color: #444;
+      }
+    }
+
+    .price {
+      margin-bottom: 1rem;
+
+      .current {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-right: 1rem;
+      }
+
+      .old {
+        text-decoration: line-through;
+        color: #aaa;
+        margin-right: 1rem;
+      }
+
+      .discount {
+        background: #ffe0e0;
+        color: #e74c3c;
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+      }
+    }
+
+    .description {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .colors {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      .color-option {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+        border: 2px solid transparent;
+        cursor: pointer;
+
+        &.active {
+          border-color: #000;
+        }
+      }
+    }
+
+    .sizes {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      .size-option {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin-right: 0.5rem;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        font-size: 0.9rem;
+
+        &.active {
+          background: #000;
+          color: #fff;
+          border-color: #000;
+        }
+      }
+    }
+
+    .add-to-cart {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .quantity {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        overflow: hidden;
+
+        button {
+          padding: 0.5rem 1rem;
+          border: none;
+          background: none;
+          font-size: 1rem;
+          cursor: pointer;
+        }
+
+        span {
+          padding: 0 1rem;
+          font-weight: 500;
+        }
+      }
+
+      .cart-btn {
+        flex: 1;
+        padding: 0.8rem;
+        background: #000;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+
+        &:hover {
+          background: #333;
+        }
+      }
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    .gallery {
+      flex-direction: column;
+      .thumbnails {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
+}
