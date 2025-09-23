@@ -1,9 +1,0 @@
-%paddingANDmargin {
-  padding: 20px 5%;
-  
-}
-
-.breadcrumb.product {
-  @extend .breadcrumb; // pulls in existing styles
-  @extend %paddingANDmargin;
-}
