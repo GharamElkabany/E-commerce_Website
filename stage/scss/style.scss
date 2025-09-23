@@ -6,4 +6,6 @@
 @use './Layout/productDetails';
 @use './Layout/category';
 @use './Layout/cart';
+@use './helpers/productCard';
+@use './helpers/reviewCard';
 @use './Layout/footer';

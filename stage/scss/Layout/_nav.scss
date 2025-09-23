@@ -1,0 +1,287 @@
+// $primary-black: #000;
+// $primary-white: #fff;
+// $border-color: #eaeaea;
+
+// *,
+// *::before,
+// *::after {
+// 	box-sizing: border-box;
+// 	// overflow-x: hidden;
+// 	@media (max-width: 993px) {
+// 		overflow-x: hidden;
+// 	}
+// }
+
+.top-strip {
+	background-color: var(--color-black);
+	font-size: var(--font-size-small);
+	position: relative;
+	width: 100%;
+
+	a {
+		text-decoration: underline;
+		margin-left: 5px;
+		font-weight: 500;
+	}
+
+	.btn-close {
+		position: absolute;
+		right: 10px;
+		top: 4px;
+		color: var(--color-white);
+	}
+}
+
+.navbar {
+	position: relative;
+
+	// margin: 0 100px;
+	padding: 20px 5%;
+	gap: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1200px; // or any container width you want
+	margin: 0 auto; // centers without overflow
+	padding: 20px; // keeps inner spacing
+	overflow-x: hidden;
+	// flex-wrap: wrap;
+	overflow: visible;
+
+	// outline: 1px solid red;
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 1px;
+		background: #eaeaea;
+		margin: 0 5%; // matches navbar padding
+
+		z-index: 10;
+	}
+
+	.navbar-brand {
+		font-family: var(--font-family-body);
+		font-weight: var(--font-weight-bold);
+		font-size: var(--font-size-logo);
+		vertical-align: middle;
+		color: var(--color-black);
+		margin-right: auto; // push everything else to the right
+		max-width: 100%;
+	}
+
+	.dropdown-menu {
+		max-height: 80vh; // Prevents dropdown from exceeding viewport
+		overflow-y: auto; // Adds internal scroll if needed
+		margin-bottom: 10px; // Prevents touching the bottom edge
+		box-sizing: border-box;
+	}
+
+	i {
+		font-size: var(--font-size-body);
+	}
+
+	.search-form {
+		position: relative;
+		// width: 577px;
+		width: 100%;
+
+		.search-icon {
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			transform: translateY(-50%);
+			font-size: 1.2rem;
+			color: #999;
+			pointer-events: none; // prevents icon blocking clicks
+		}
+
+		.search-input {
+			width: 100%;
+			padding: 10px 15px 10px 45px; // left padding for icon
+			border: none;
+			border-radius: 62px;
+			background-color: var(--color-greybg);
+			font-size: var(--font-size-body);
+			max-width: 100%;
+			flex: 1; // let it grow/shrink naturally
+			max-width: 577px; // keep your desktop width but allow shrink
+
+			&:focus {
+				outline: none;
+				box-shadow: 0 0 0 2px rgba(83, 93, 161, 0.2); // subtle highlight on focus
+			}
+		}
+	}
+
+	.nav-link {
+		font-size: 1rem;
+		margin-right: 1rem;
+		color: var(--color-black);
+		white-space: nowrap;
+
+		.nav-icon {
+			width: 24px;
+			height: 24px;
+			object-fit: contain;
+			/* keeps aspect ratio */
+			margin-right: -8px;
+			/* spacing from input */
+		}
+
+		.bi {
+			font-weight: bold !important;
+		}
+
+		.bi::before {
+			font-weight: bold !important;
+			// stroke-width: 6px !important;
+		}
+
+		&:hover {
+			color: #535da1;
+		}
+	}
+
+	// Hide desktop search bar in mobile
+	@media (max-width: 770px) {
+		overflow-x: hidden;
+		// margin: 0 20px;
+		// margin-left: 20px;
+		padding: 20px 0;
+		font-size: 25px;
+		// gap: 5px;
+		justify-content: space-between;
+		overflow-x: hidden;
+		box-sizing: border-box; // Ensure it doesn’t exceed the width
+
+		// outline: 1px solid red;
+		// flex-wrap: nowrap;
+		&::after {
+			margin-left: auto;
+			margin-right: auto;
+			width: 90%;
+		}
+
+		.navbar-brand {
+			font-size: 25px;
+			// margin-right: 0;
+			margin-right: 5%; // logo left
+		}
+
+		.search-form {
+			display: none !important;
+		}
+
+		.nav-icons {
+			display: flex; // show icons on the right
+			margin-left: auto;
+		}
+
+		.navbar-nav .nav-item {
+			display: inline-block;
+			/* shrink-wrap to content */
+			width: auto;
+			/* no forced width */
+			margin: 0;
+			/* reset Bootstrap margins if any */
+			width: 50%;
+		}
+
+		.navbar-nav .nav-link {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		/* ✅ Mobile dropdown fix */
+		.navbar-nav .dropdown-menu {
+			position: static !important; // inline instead of absolute
+			float: none !important;
+			box-shadow: none;
+			max-height: none !important;
+			overflow: visible !important;
+			padding-left: 1rem;
+		}
+
+		#navbarNav {
+			overflow: visible !important;
+		}
+	}
+}
+
+
+/* visually-hidden (keeps element accessible/clickable) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Mobile search form (hidden by default) */
+.mobile-search-form {
+  display: none;
+  width: 100%;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  position: relative;
+
+  .search-input {
+    width: 100%;
+    padding: 10px 15px 10px 45px;
+    border: none;
+    border-radius: 62px;
+    background-color: var(--color-greybg);
+    font-size: var(--font-size-body);
+    box-sizing: border-box;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 1.1rem;
+  }
+}
+
+/* When checkbox is checked, show the mobile search (needs input immediately before form) */
+#search-toggle:checked + .mobile-search-form {
+  display: block;
+}
+
+/* Show/hide helper rules per screen size */
+@media (max-width: 768px) {
+  /* hide desktop search on small screens */
+  .search-form {
+    display: none !important;
+  }
+
+  /* show the search label/icon on mobile */
+  .search-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+  }
+}
+
+@media (min-width: 769px) {
+  /* ensure mobile search toggle and form are hidden on desktop */
+  .search-toggle-label {
+    display: none !important;
+  }
+  .mobile-search-form {
+    display: none !important;
+  }
+}

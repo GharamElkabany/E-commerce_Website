@@ -3,11 +3,123 @@ html(lang="en")
     head
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        title e-commerce
+        title Your Cart | Shop Store
         link(rel='preconnect' href='https://fonts.googleapis.com')
         link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
         link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
         link(href='https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap' rel='stylesheet')
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css")
         link(rel='stylesheet' href='css/style.css')
     body
         include ./pug/layout/nav.pug
+        // Main content
+        //- cart.pug
+        main.container.my-5
+            // Breadcrumb
+            nav.mb-4(aria-label="breadcrumb")
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a.text-decoration-none.text-muted(href="index.html") Home
+                    li.breadcrumb-item.active(aria-current="page") Cart
+            .row
+                h1.fw-bold.mb-4 YOUR CART
+                // Cart Items Section
+                .col-lg-8
+                    .cart-items.d-flex.flex-column.align-items-start.justify-content-between.mb-3.p-3
+                        // Cart Item 1
+                        .cart-item.d-flex.align-items-center.justify-content-between.mb-3.p-3.position-relative
+                            button.btn.btn-link.text-danger.position-absolute.top-0.end-0.mt-2.me-2
+                                i.bi.bi-trash-fill
+                            .d-flex.align-items-center
+                                img(src="assets/images/Gradient-Graphic-T-shirt.svg" alt="Gradient T-shirt" class="cart-img me-3")
+                                .item-details
+                                    h5.fw-bold.mb-1.me-4 Gradient Graphic T-shirt
+                                    p.mb-0 Size: 
+                                        span.text-muted Large
+                                    p.mb-0 Color: 
+                                        span.text-muted White
+                                    p.fw-bold.mt-2 $145
+                            .d-flex.align-items-center.position-absolute.end-0.bottom-0.mb-2.me-2
+                                span.bg-light.rounded-pill.fs-5
+                                    button.btn.btn-light.rounded-circle.fs-5.fw-bold.me-2 -
+                                    span.bg-light.mx-2 1
+                                    button.btn.btn-light.rounded-circle.fs-5.fw-bold.ms-2 +
+                    
+                            
+                            
+
+                        // Cart Item 2
+                        .cart-item.d-flex.align-items-center.justify-content-between.mb-3.p-3.position-relative 
+                            button.btn.btn-link.text-danger.position-absolute.top-0.end-0.mt-2.me-2
+                                i.bi.bi-trash-fill
+                            .d-flex.align-items-center
+                                img(src="assets/images/CHECKERED-SHIRT.svg" alt="Checkered Shirt" class="cart-img me-3")
+                                .item-details
+                                    h5.fw-bold.mb-1.me-4 Checkered Shirt
+                                    p.mb-0 Size: 
+                                        span.text-muted Medium
+                                    p.mb-0 Color: 
+                                        span.text-muted Red
+                                    p.fw-bold.mt-2 $180
+                            .d-flex.align-items-center.position-absolute.end-0.bottom-0.mb-2.me-2
+                                span.bg-light.rounded-pill.fs-5
+                                    button.btn.btn-light.rounded-circle.fs-5.fw-bold.me-2 -
+                                    span.bg-light.mx-2 1
+                                    button.btn.btn-light.rounded-circle.fs-5.fw-bold.ms-2 +
+                        // Cart Item 3
+                        .cart-item.d-flex.align-items-center.justify-content-between.mb-3.p-3.position-relative 
+                            button.btn.btn-link.text-danger.position-absolute.top-0.end-0.mt-2.me-2
+                                i.bi.bi-trash-fill
+                            .d-flex.align-items-center
+                                img(src="assets/images/SKINNY-FIT-JEANS.svg" alt="Skinny Fit Jeans" class="cart-img me-3")
+                                .item-details
+                                    h5.fw-bold.mb-1.me-4 Skinny Fit Jeans
+                                    p.mb-0 Size: 
+                                        span.text-muted Large
+                                    p.mb-0 Color: 
+                                        span.text-muted Blue
+                                    p.fw-bold.mt-2 $240
+                            .d-flex.align-items-center.position-absolute.end-0.bottom-0.mb-2.me-2
+                                span.bg-light.rounded-pill.fs-5
+                                    button.btn.btn-light.rounded-circle.fs-5.fw-bold.me-2 -
+                                    span.bg-light.mx-2 1
+                                    button.btn.btn-light.rounded-circle.fs-5.fw-bold.ms-2 +
+
+
+                // Order Summary Section
+                .col-lg-4
+                    .summary-box.p-4
+                        h5.fw-bold.mb-3 Order Summary
+                        .d-flex.justify-content-between.mb-2
+                            span.text-muted Subtotal
+                            span.fw-bold $565
+                        .d-flex.justify-content-between.mb-2
+                            span.text-muted Discount (-20%)
+                            span.text-danger.fw-bold -$113
+                        .d-flex.justify-content-between.mb-2
+                            span.text-muted Delivery Fee
+                            span.fw-bold $15
+                        hr
+                        .d-flex.justify-content-between.mb-3
+                            span Total
+                            span.fw-bold $467
+
+                        // Promo Code
+                        .input-group.mb-3
+                            span.input-group-text
+                                i.bi.bi-tag
+                            input.form-control(type="text" placeholder="Add promo code")
+                            button.btn.btn-dark Apply
+
+                        // Checkout Button
+                        button.btn.btn-dark.w-100 Go to Checkout →
+
+
+
+
+
+
+        include ./pug/layout/footer.pug
+
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js")
