@@ -535,6 +535,37 @@ h2.section-title {
   color: #000;
 }
 
+.customers-container {
+  padding: 5rem 2rem 0 2rem;
+  position: relative;
+  overflow: visible;
+}
+.customers-container .swiper-wrapper {
+  padding: 10px 0;
+  display: flex;
+}
+.customers-container .swiper-wrapper .swiper-slide {
+  height: 270px;
+  flex-shrink: 0;
+}
+.customers-container .custom-next-button,
+.customers-container .custom-prev-button {
+  position: absolute;
+  top: 18%;
+  transform: translateY(-50%);
+  padding: 10px;
+  z-index: 20;
+}
+.customers-container .custom-next-button {
+  background-image: url(../assets/home/icons/left-arrow.svg);
+  right: 20px;
+  transform: translateY(-30%) rotate(-180deg);
+}
+.customers-container .custom-prev-button {
+  background-image: url(../assets/home/icons/left-arrow.svg);
+  right: 55px;
+}
+
 @media (max-width: 768px) {
   .home-section h1 {
     font-size: 4rem;
@@ -557,6 +588,12 @@ h2.section-title {
   .home-section .hero-img .small-star {
     top: 50% !important;
     right: 70% !important;
+  }
+}
+@media (max-width: 464px) {
+  .customers-container .custom-next-button,
+  .customers-container .custom-prev-button {
+    top: 110px;
   }
 }
 .body {
@@ -658,63 +695,107 @@ h2.section-title {
   border-radius: 62px !important;
 }
 
-.product-card {
+a {
+  text-decoration: none;
+}
+a .product-card {
   display: flex;
   flex-direction: column;
   padding: 16px;
   width: var(--card-width, 100%);
   max-width: var(--card-max-width, 330px);
 }
-.product-card img {
+a .product-card img {
   width: var(--card-img-width, 100%);
   object-fit: contain;
   border-radius: 5px;
 }
-.product-card .product-info {
+a .product-card .product-info {
   margin-top: 10px;
 }
-.product-card .product-info h3 {
+a .product-card .product-info h3 {
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-bold);
   color: var(--color-black);
 }
-.product-card .product-info .rating {
+a .product-card .product-info .rating {
   display: flex;
   margin-top: 1rem;
 }
-.product-card .product-info .rating img {
+a .product-card .product-info .rating img {
   width: 16px;
   height: 16px;
   margin-right: 2px;
 }
-.product-card .product-info .rating span {
+a .product-card .product-info .rating span {
   margin-left: 8px;
   color: var(--color-lightergrey-p);
   font-size: var(--font-size-grey-rating);
 }
-.product-card .product-info .pricing-info {
+a .product-card .product-info .pricing-info {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
   margin-top: 10px;
 }
-.product-card .product-info .pricing-info .current-price {
+a .product-card .product-info .pricing-info .current-price {
   font-size: var(--font-size-price);
   font-weight: var(--font-weight-bold);
   color: var(--color-black);
 }
-.product-card .product-info .pricing-info .original-price {
+a .product-card .product-info .pricing-info .original-price {
   font-size: var(--font-size-price);
   text-decoration: line-through;
   color: rgba(196, 199, 201, 0.8745098039);
 }
-.product-card .product-info .pricing-info .discount {
+a .product-card .product-info .pricing-info .discount {
   font-size: var(--font-size-discount);
   color: var(--color-red-discount);
   background-color: var(--color-red-discount-bg);
   padding: 2px 10px;
   border-radius: 20px;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid var(--color-greybg);
+  height: 100%;
+  width: 98%;
+}
+.review-card .star-rating {
+  display: flex;
+  align-items: center;
+}
+.review-card .star-rating img {
+  width: 16px;
+  height: 16px;
+  margin-right: 3px;
+}
+.review-card .customer-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.review-card .customer-info .customer-name {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-body);
+  margin-right: 10px;
+}
+.review-card .customer-info img {
+  width: 24px;
+  height: 24px;
+}
+.review-card .comment {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  color: var(--color-darkergrey-p);
 }
 
 footer .newsletter-wrapper {
