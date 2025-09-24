@@ -4,6 +4,8 @@
 
 Welcome to the **E-commerce Website** project! This is a fully responsive, modern e-commerce platform built using the latest web technologies like **Google Fonts**, **Sass**, **Pug**, and **Bootstrap**. It's designed for users to easily browse products, check out details, and manage their shopping carts with a smooth user experience. 
 
+🌐 Live Demo: [Shop.co E-commerce website](https://shopco-ashen.vercel.app/index.html)
+
 ---
 
 ## Technologies Used ⚙️
@@ -25,6 +27,9 @@ Welcome to the **E-commerce Website** project! This is a fully responsive, moder
    - A front-end framework that accelerates web design with pre-styled components.
    - *Version*: 5.3 (or latest version used)
 
+### 5. **Swiper.js** 🖥️
+   - Used for creating interactive and responsive carousels and slideshows
+
 ---
 
 ## File Structure 📂
@@ -43,9 +48,11 @@ The project is organized in a way that ensures clean and efficient development. 
 ├── 🗂️ category.html # Compiled HTML for category page
 ├── 🏠 index.html # Compiled HTML for homepage
 └── 📦 productDetails.html # Compiled HTML for product details page
+   
 📂 stage/
 ├── 📂 pug/
 │  └── 📂 layout/ # Layout files for reusable sections like footer and nav
+│    ├── 📄 _mixins.pug   
 │    ├── 📄 footer.pug
 │    └── 📄 nav.pug
 │
@@ -54,6 +61,8 @@ The project is organized in a way that ensures clean and efficient development. 
 │  │  └── 📄 _global.scss
 │  │
 │  ├── 📂 helpers/ # Helpers styles and variables
+│  │  ├── 📄 _productCard.scss 
+│  │  ├── 📄 _reviewCard.scss   
 │  │  └── 📄 _images_sizes.scss  
 │  │
 │  ├── 📂 Layout/ # Layout-specific styles (cart, category, etc.)
