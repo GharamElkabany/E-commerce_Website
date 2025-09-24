@@ -1,163 +1,551 @@
 doctype html
 html(lang="en")
     head
-        meta(charset='UTF-8')
-        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Casual | Shop Store
-        link(rel='preconnect' href='https://fonts.googleapis.com')
-        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-        link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
-        link(href='https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap' rel='stylesheet')
-        link(rel='stylesheet' href='css/style.css')
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin="")
+        link(href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet")
+        link(href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" href="css/style.css")
+
     body
+
         include ./pug/layout/nav.pug
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title e-commerce
-    link(rel="preconnect", href="https://fonts.googleapis.com")
-    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin="")
-    link(rel="preconnect", href="https://fonts.googleapis.com")
-    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet")
-    link(rel="preconnect", href="https://fonts.googleapis.com")
-    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet")
-    // link(rel="stylesheet", href="./css/bootstrap.min.css")
-    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous")
-    link(href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet")
-    link(href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet")
-    link(rel="stylesheet", href="css/style.css")
 
-  body
-    nav nav place
-    hr
-    .container.py-5
-      .row
-        .col-3
-          form.py-3.px-1.border.rounded-4
-            // Filter header
-            .d-flex.align-items-center.justify-content-between.mb-3.mx-3.border-bottom.pb-4
-              h4.mb-0 Filters
-              img(src="./assets/icons/filter-icon.svg", alt="Filter")
-              // button.btn.btn-light.p-1
-              //   img(src="./assets/icons/filter-icon.svg", alt="Filter", width="20", height="20")
+        //- Main Content
+        .container.py-5
+            //- Breadcrumb
+            nav.mb-4(aria-label="breadcrumb")
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a.text-decoration-none.text-muted(href="index.html") Home
+                    li.breadcrumb-item.active(aria-current="page") Casual
 
-            .mb-4.pb-2.mx-3.border-bottom
-              ul.list-group.filter-category-list.list-group-flush
-                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
-                  | T-shirts
-                  img(src="./assets/icons/right-arrow.svg", alt=">")
-                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
-                  | Shorts
-                  img(src="./assets/icons/right-arrow.svg", alt=">")
-                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
-                  | Shirts
-                  img(src="./assets/icons/right-arrow.svg", alt=">")
-                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
-                  | Hoodie
-                  img(src="./assets/icons/right-arrow.svg", alt=">")
-                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
-                  | Jeans
-                  img(src="./assets/icons/right-arrow.svg", alt=">")
+            .row
+                //-  filter
+                .col-12.col-md-2.w-25.d-none.d-md-block.px-0
+                    form.py-3.px-1.border.rounded-4
+                        //-  header
+                        .d-flex.align-items-center.justify-content-between.mb-3.mx-3.border-bottom.pb-4
+                            h4.mb-0 Filters
+                            img(src="./assets/icons/filter-icon.svg" alt="Filter")
 
-            // Price
-            .d-flex.justify-content-between.align-items-center.mt-2.mb-3.px-3
-              h4.mb-0 Price
-              button.btn.p-0.border-0.bg-transparent(type="button", data-bs-toggle="collapse", data-bs-target="#priceCollapse", aria-expanded="true", aria-controls="priceCollapse")
-                img(src="./assets/icons/down-arrow.svg", alt="v")
+                        //- Categories
+                        .mb-4.pb-2.mx-3.border-bottom
+                            ul.list-group.filter-category-list.list-group-flush
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | T-shirts
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Shorts
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Shirts
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Hoodie
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Jeans
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
 
-            // Price Content
-            #priceCollapse.collapse.show.mb-4.mx-3.border-bottom.pb-2
-              input#priceRange.form-range.mb-2(type="range", min="50", max="1000", value="60", step="10")
-              .d-flex.justify-content-center
-                p.text-muted
-                  | From 
-                  span $50 
-                  | to 
-                  span $
-                  output#rangeValue(for="priceRange", aria-hidden="true")
+                        //- Price
+                        .d-flex.justify-content-between.align-items-center.mt-2.mb-3.px-3
+                            h4.mb-0 Price
+                            button.btn.p-0.border-0.bg-transparent(
+                                type="button",
+                                data-bs-toggle="collapse",
+                                data-bs-target="#priceCollapse",
+                                aria-expanded="true",
+                                aria-controls="priceCollapse"
+                            )
+                                img(src="./assets/icons/down-arrow.svg" alt="v")
 
-            // Color
-            .d-flex.justify-content-between.align-items-center.mb-3.px-3
-              h4.mb-0 Colors
-              button.btn.p-0.border-0.bg-transparent(type="button", data-bs-toggle="collapse", data-bs-target="#colorCollapse", aria-expanded="true", aria-controls="colorCollapse")
-                img(src="./assets/icons/down-arrow.svg", alt="v")
+                        .collapse.show.mb-4.mx-3.border-bottom.pb-2(id="priceCollapse")
+                            input.form-range.mb-2(
+                                id="priceRange",
+                                type="range",
+                                min="50",
+                                max="1000",
+                                value="60",
+                                step="10"
+                            )
+                            .d-flex.justify-content-center
+                                p.text-muted
+                                    | From
+                                    span $50
+                                    |  to $
+                                    output(id="rangeValue" for="priceRange" aria-hidden="true")
+                        //- Colors
+                        .d-flex.justify-content-between.align-items-center.mb-3.px-3
+                            h4.mb-0 Colors
+                            button.btn.p-0.border-0.bg-transparent(
+                                type="button",
+                                data-bs-toggle="collapse",
+                                data-bs-target="#colorCollapse",
+                                aria-expanded="true",
+                                aria-controls="colorCollapse"
+                            )
+                                img(src="./assets/icons/down-arrow.svg" alt="v")
 
-            // Color Content
-            #colorCollapse.collapse.show.mb-4.mx-3.border-bottom.pb-3
-              .d-flex.flex-wrap.gap-2
-                .rounded-circle.border.color-circles(style="background:var(--color-green);")
-                .rounded-circle.border.color-circles(style="background:var(--color-red);")
-                .rounded-circle.border.color-circles(style="background:var(--color-yellow);")
-                .rounded-circle.border.color-circles(style="background:var(--color-orange);")
-                .rounded-circle.border.color-circles(style="background:var(--color-cyan);")
-                .rounded-circle.border.color-circles(style="background:var(--color-blue);")
-                .rounded-circle.border.color-circles(style="background:var(--color-violet);")
-                .rounded-circle.border.color-circles(style="background:var(--color-pink);")
-                .rounded-circle.border.color-circles(style="background:var(--color-white);")
-                .rounded-circle.border.color-circles(style="background:var(--color-black);")
+                        .collapse.show.mb-4.mx-3.border-bottom.pb-3(id="colorCollapse")
+                            .d-flex.flex-wrap.gap-2
+                                .rounded-circle.border.color-circles(style="background:var(--color-green);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-red);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-yellow);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-orange);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-cyan);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-blue);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-violet);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-pink);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-white);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-black);")
 
-            // Size
-            .d-flex.justify-content-between.align-items-center.mb-3.px-3
-              h4.mb-0 Size
-              button.btn.p-0.border-0.bg-transparent(type="button", data-bs-toggle="collapse", data-bs-target="#sizeCollapse", aria-expanded="true", aria-controls="sizeCollapse")
-                img(src="./assets/icons/down-arrow.svg", alt="v")
+                        //- Size
+                        .d-flex.justify-content-between.align-items-center.mb-3.px-3
+                            h4.mb-0 Size
+                            button.btn.p-0.border-0.bg-transparent(
+                                type="button",
+                                data-bs-toggle="collapse",
+                                data-bs-target="#sizeCollapse",
+                                aria-expanded="true",
+                                aria-controls="sizeCollapse"
+                            )
+                                img(src="./assets/icons/down-arrow.svg" alt="v")
 
-            // Sizes Content
-            #sizeCollapse.collapse.show.mb-4.mx-3.border-bottom.pb-3
-              .d-flex.flex-wrap.gap-2
-                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") XX-Small
-                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") X-Small
-                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") Small
-                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") Medium
-                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") Large
-                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") X-Large
-                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") XX-Large
-                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") 3X-Large
-                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") 4X-Large
+                        .collapse.show.mb-4.mx-3.border-bottom.pb-3(id="sizeCollapse")
+                            .d-flex.flex-wrap.gap-2
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") XX-Small
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") X-Small
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") Small
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") Medium
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") Large
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") X-Large
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") XX-Large
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") 3X-Large
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") 4X-Large
 
-            // Dress style header
-            .d-flex.align-items-center.justify-content-between.mb-2.px-3
-              h4.mb-0 Dress Style
-              button.btn.p-0.border-0.bg-transparent(type="button", data-bs-toggle="collapse", data-bs-target="#dressStyleCollapse", aria-expanded="true", aria-controls="dressStyleCollapse")
-                img(src="./assets/icons/down-arrow.svg", alt="v")
+                        //- Dress style
+                        .d-flex.align-items-center.justify-content-between.mb-2.px-3
+                            h4.mb-0 Dress Style
+                            button.btn.p-0.border-0.bg-transparent(
+                                type="button",
+                                data-bs-toggle="collapse",
+                                data-bs-target="#dressStyleCollapse",
+                                aria-expanded="true",
+                                aria-controls="dressStyleCollapse"
+                            )
+                                img(src="./assets/icons/down-arrow.svg" alt="v")
 
-            // Dress style content
-            #dressStyleCollapse.collapse.show.mb-2.mx-3
-              ul.list-group.filter-category-list.list-group-flush
-                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
-                  | Casual
-                  img(src="./assets/icons/right-arrow.svg", alt=">")
-                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
-                  | Formal
-                  img(src="./assets/icons/right-arrow.svg", alt=">")
-                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
-                  | Party
-                  img(src="./assets/icons/right-arrow.svg", alt=">")
-                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
-                  | Gym
-                  img(src="./assets/icons/right-arrow.svg", alt=">")
+                        .collapse.show.mb-2.mx-3(id="dressStyleCollapse")
+                            ul.list-group.filter-category-list.list-group-flush
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Casual
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Formal
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Party
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Gym
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
 
-            // Apply filter button
-            .d-flex.justify-content-center.mx-3
-              button.btn.btn-dark.bg-black.rounded-5.w-100.p-2.my-2(type="button") Apply Filter
+                        .d-flex.justify-content-center.mx-3
+                            button.btn.btn-dark.bg-black.rounded-5.w-100.p-2.my-2(type="button") Apply Filter  
+                //- Product Grid
+                .col-12.col-md-9.px-0
+                    .d-flex.justify-content-between.align-items-center.mb-4
+                        h1.fw-bold.mb-0.px-3 Casual
+                        .d-flex.align-items-center
+                            p.text-muted.mb-0.me-3 Showing 1-10 of 100 products
+                            .dropdown
+                                a.text-dark.text-decoration-none.dropdown-toggle(
+                                    href="#",
+                                    role="button",
+                                    data-bs-toggle="dropdown",
+                                    aria-expanded="false"
+                                ) Sort by: 
+                                    strong Most Popular
+                                ul.dropdown-menu
+                                    li: a.dropdown-item(href="#") Most Popular
+                                    li: a.dropdown-item(href="#") Newest
+                                    li: a.dropdown-item(href="#") Price: Low to High
+                                    li: a.dropdown-item(href="#") Price: High to Low
+                                    li: a.dropdown-item(href="#") Highest Rated
 
-        // Products area
-        .col-9
-          // .d-flex.align-items-center.justify-content-between.mb-3
-          //   h4.mb-0 Casual
-          //   i.bi.bi-sliders // Bootstrap icon
+                    //- Filter toggle button (only visible on small screens)
+                    .d-flex.justify-content-end.mb-3.d-md-none
+                        button.btn.btn-outline-light(
+                            type="button",
+                            data-bs-toggle="offcanvas",
+                            data-bs-target="#filterSidebar"
+                        )
+                            img(
+                                src="./assets/icons/filter-icon.svg",
+                                alt="Filter",
+                                style="height:20px; width:20px;"
+                            )
 
-    script.
-      // Script for range input in price section in the filter
-      const rangeInput = document.getElementById('priceRange');
-      const rangeOutput = document.getElementById('rangeValue');
+                    .row.row-cols-2.row-cols-md-3.g-3
+                        //- Product 1
+                        .col
+                            a(href="productDetails.html")
+                                .product-card
+                                    img.rounded-4.w-100(
+                                        src="./assets/images/Gradient-Graphic-T-shirt.svg",
+                                        alt="Gradient Graphic T-shirt",
+                                        style="height: 275px; object-fit: cover;"
+                                    )
+                                    .product-info
+                                        h3 Gradient Graphic T-shirt
+                                        .rating
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/half-rate-star.svg" alt="half star")
+                                            span 3.5/5
+                                        .pricing-info
+                                            .current-price $145
 
-      rangeOutput.textContent = rangeInput.value;
+                        //- Product 2
+                        .col
+                            a(href="productDetails.html")
+                                .product-card
+                                    img.rounded-4.w-100(
+                                        src="./assets/images/Polo-with-Tipping-Details.svg",
+                                        alt="Polo With Tipping Details",
+                                        style="height: 275px; object-fit: cover;"
+                                    )
+                                    .product-info
+                                        h3 Polo With Tipping Details
+                                        .rating
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/half-rate-star.svg" alt="half star")
+                                            span 4.5/5
+                                        .pricing-info
+                                            .current-price $180
 
-      rangeInput.addEventListener('input', function () {
-        rangeOutput.textContent = this.value;
-      });
+                        //- Product 3
+                        .col
+                            a(href="productDetails.html")
+                                .product-card
+                                    img.rounded-4.w-100(
+                                        src="./assets/images/Black-Striped-T-shirt.svg",
+                                        alt="Black Striped T-shirt",
+                                        style="height: 275px; object-fit: cover;"
+                                    )
+                                    .product-info
+                                        h3 Black Striped T-shirt
+                                        .rating
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            span 5.0/5
+                                        .pricing-info
+                                            .current-price $120
+                                            .original-price: span $150
+                                            .discount: span -30%
 
-    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")
+                        //- Product 4
+                        .col
+                            a(href="productDetails.html")
+                                .product-card
+                                    img.rounded-4.w-100(
+                                        src="./assets/images/SKINNY-FIT-JEANS.svg",
+                                        alt="SKINNY FIT JEANS",
+                                        style="height: 275px; object-fit: cover;"
+                                    )
+                                    .product-info
+                                        h3 SKINNY FIT JEANS
+                                        .rating
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/half-rate-star.svg" alt="half star")
+                                            span 3.5/5
+                                        .pricing-info
+                                            .current-price $240
+                                            .original-price: span $260
+                                            .discount: span -20%
+
+                        //- Product 5
+                        .col
+                            a(href="productDetails.html")
+                                .product-card
+                                    img.rounded-4.w-100(
+                                        src="./assets/images/CHECKERED-SHIRT.svg",
+                                        alt="SLEEVE STRIPED T-SHIRT",
+                                        style="height: 275px; object-fit: cover;"
+                                    )
+                                    .product-info
+                                        h3 SLEEVE STRIPED T-SHIRT
+                                        .rating
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/half-rate-star.svg" alt="half star")
+                                            span 4.5/5
+                                        .pricing-info
+                                            .current-price $130
+                                            .original-price: span $160
+                                            .discount: span -30%
+
+                        //- Product 6
+                        .col
+                            a(href="productDetails.html")
+                                .product-card
+                                    img.rounded-4.w-100(
+                                        src="./assets/images/SLEEVE-STRIPED-T-SHIRT.svg",
+                                        alt="Gradient Graphic T-shirt",
+                                        style="height: 275px; object-fit: cover;"
+                                    )
+                                    .product-info
+                                        h3 Gradient Graphic T-shirt
+                                        .rating
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            span 5.0/5
+                                        .pricing-info
+                                            .current-price $212
+                                            .original-price: span $232
+                                            .discount: span -20%
+
+                        //- Product 7
+                        .col
+                            a(href="productDetails.html")
+                                .product-card
+                                    img.rounded-4.w-100(
+                                        src="./assets/images/VERTICAL-STRIPED-SHIRT.svg",
+                                        alt="Gradient Graphic T-shirt",
+                                        style="height: 275px; object-fit: cover;"
+                                    )
+                                    .product-info
+                                        h3 Gradient Graphic T-shirt
+                                        .rating
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            span 5.0/5
+                                        .pricing-info
+                                            .current-price $212
+                                            .original-price: span $232
+                                            .discount: span -20%
+
+                        //- Product 8
+                        .col
+                            a(href="productDetails.html")
+                                .product-card
+                                    img.rounded-4.w-100(
+                                        src="./assets/images/COURAGE-GRAPHIC-T-SHIRT.svg",
+                                        alt="Courage Graphic T-shirt",
+                                        style="height: 275px; object-fit: cover;"
+                                    )
+                                    .product-info
+                                        h3 Courage Graphic T-shirt
+                                        .rating
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            span 4.0/5
+                                        .pricing-info
+                                            .current-price $145
+
+                        //- Product 9
+                        .col
+                            a(href="productDetails.html")
+                                .product-card
+                                    img.rounded-4.w-100(
+                                        src="./assets/images/LOOSE-FIT-BERMUDA-SHORTS.svg",
+                                        alt="Loose Fit Bermuda Shorts",
+                                        style="height: 275px; object-fit: cover;"
+                                    )
+                                    .product-info
+                                        h3 Loose Fit Bermuda Shorts
+                                        .rating
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            img(src="./assets/home/icons/full-rate-star.svg" alt="full star")
+                                            span 3.0/5
+                                        .pricing-info
+                                            .current-price $80       
+                    //- Pagination
+                    nav.mt-5(aria-label="Product pagination")
+                        ul.pagination.justify-content-center.flex-nowrap
+                            li.page-item
+                                a.page-link.text-dark(href="#" aria-label="Previous") Previous
+                            li.page-item.d-none.d-md-block: a.page-link.text-dark(href="#") 1
+                            li.page-item.d-none.d-md-block: a.page-link.text-dark(href="#") 2
+                            li.page-item.d-none.d-md-block: a.page-link.text-dark(href="#") 3
+                            li.page-item.disabled.d-none.d-md-block: span.page-link.text-dark ...
+                            li.page-item.d-none.d-md-block: a.page-link.text-dark(href="#") 8
+                            li.page-item.d-none.d-md-block: a.page-link.text-dark(href="#") 9
+                            li.page-item.active.d-none.d-md-block
+                                a.page-link.bg-dark.border-dark.text-white(href="#") 10
+                            li.page-item
+                                a.page-link.text-dark(href="#" aria-label="Next") Next →
+
+            //- Offcanvas filter for phones
+            .offcanvas.offcanvas-bottom(tabindex="-1" id="filterSidebar")
+                .offcanvas-header
+                .offcanvas-body
+                    form.p-0.py-1
+                        //- Filter header
+                        .d-flex.align-items-center.justify-content-between.mb-3.mx-3.border-bottom.pb-4
+                            h4.mb-0 Filters
+                            button.btn-close.btn-light(type="button" data-bs-dismiss="offcanvas")
+
+                        //- Category
+                        .mb-4.pb-2.mx-3.border-bottom
+                            ul.list-group.filter-category-list.list-group-flush
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | T-shirts
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Shorts
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Shirts
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Hoodie
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Jeans
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+
+                        //- Price
+                        .d-flex.justify-content-between.align-items-center.mt-2.mb-3.px-3
+                            h4.mb-0 Price
+                            button.btn.p-0.border-0.bg-transparent(
+                                type="button",
+                                data-bs-toggle="collapse",
+                                data-bs-target="#priceCollapse",
+                                aria-expanded="true",
+                                aria-controls="priceCollapse"
+                            )
+                                img(src="./assets/icons/down-arrow.svg" alt="v")
+
+                        .collapse.show.mb-4.mx-3.border-bottom.pb-2(id="priceCollapse")
+                            label.form-label(for="priceRange") Price
+                            input.form-range.mb-2(
+                                id="priceRange",
+                                type="range",
+                                min="50",
+                                max="1000",
+                                value="60",
+                                step="10"
+                            )
+                            .d-flex.justify-content-center
+                                p.text-muted
+                                    | From 
+                                    span $50
+                                    |  to $
+                                    span(id="rangeValue") 60
+
+                        //- Colors
+                        .d-flex.justify-content-between.align-items-center.mb-3.px-3
+                            h4.mb-0 Colors
+                            button.btn.p-0.border-0.bg-transparent(
+                                type="button",
+                                data-bs-toggle="collapse",
+                                data-bs-target="#colorCollapse",
+                                aria-expanded="true",
+                                aria-controls="colorCollapse"
+                            )
+                                img(src="./assets/icons/down-arrow.svg" alt="v")
+
+                        .collapse.show.mb-4.mx-3.border-bottom.pb-3(id="colorCollapse")
+                            .d-flex.flex-wrap.gap-2
+                                .rounded-circle.border.color-circles(style="background:var(--color-green);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-red);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-yellow);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-orange);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-cyan);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-blue);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-violet);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-pink);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-white);")
+                                .rounded-circle.border.color-circles(style="background:var(--color-black);")
+
+                        //- Size
+                        .d-flex.justify-content-between.align-items-center.mb-3.px-3
+                            h4.mb-0 Size
+                            button.btn.p-0.border-0.bg-transparent(
+                                type="button",
+                                data-bs-toggle="collapse",
+                                data-bs-target="#sizeCollapse",
+                                aria-expanded="true",
+                                aria-controls="sizeCollapse"
+                            )
+                                img(src="./assets/icons/down-arrow.svg" alt="v")
+
+                        .collapse.show.mb-4.mx-3.border-bottom.pb-3(id="sizeCollapse")
+                            .d-flex.flex-wrap.gap-2
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") XX-Small
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") X-Small
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") Small
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") Medium
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") Large
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") X-Large
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") XX-Large
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") 3X-Large
+                                button.btn.btn-secondary.size-btn.py-2.px-3.rounded-5(type="button") 4X-Large
+
+                        //- Dress style
+                        .d-flex.align-items-center.justify-content-between.mb-2.px-3
+                            h4.mb-0 Dress Style
+                            button.btn.p-0.border-0.bg-transparent(
+                                type="button",
+                                data-bs-toggle="collapse",
+                                data-bs-target="#dressStyleCollapse",
+                                aria-expanded="true",
+                                aria-controls="dressStyleCollapse"
+                            )
+                                img(src="./assets/icons/down-arrow.svg" alt="v")
+
+                        .collapse.show.mb-2.mx-3(id="dressStyleCollapse")
+                            ul.list-group.filter-category-list.list-group-flush
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Casual
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Formal
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Party
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+                                li.list-group-item.d-flex.justify-content-between.align-items-center.py-1.px-0
+                                    | Gym
+                                    img(src="./assets/icons/right-arrow.svg" alt="&gt;")
+
+                        .d-flex.justify-content-center.mx-3
+                            button.btn.btn-dark.bg-black.rounded-5.w-100.p-2.my-2(type="button") Apply Filter
+        include ./pug/layout/footer.pug
+
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js")
+        script.
+            const rangeInput = document.getElementById('priceRange');
+            const rangeOutput = document.getElementById('rangeValue');
+            if (rangeInput && rangeOutput) {
+                rangeOutput.textContent = rangeInput.value;
+                rangeInput.addEventListener('input', function () {
+                    rangeOutput.textContent = this.value;
+                });
+            }                                                                                                   
