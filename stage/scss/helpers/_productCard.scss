@@ -4,12 +4,13 @@ a{
   .product-card {
     display: flex;
     flex-direction: column;
-    padding: 16px;
+    padding: 10px;
     width: var(--card-width, 100%);
     max-width: var(--card-max-width, 330px);
   
     img {
       width: var(--card-img-width, 100%);
+      height: 300px;
       object-fit: contain;
       border-radius: 5px;
     }

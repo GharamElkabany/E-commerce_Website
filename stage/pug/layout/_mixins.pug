@@ -1,7 +1,7 @@
-mixin productCard(image, title, fullStarSvg, halfStarSvg, fullStarsCount, halfStarsCount, ratingText, price, originalPrice, discount, cardHeight='300px')
+mixin productCard(image, title, fullStarSvg, halfStarSvg, fullStarsCount, halfStarsCount, ratingText, price, originalPrice, discount)
   a(href='productDetails.html')  
     .product-card
-      img(src=image alt=title style=`height: ${cardHeight};`)
+      img(src=image alt=title style="height: 275px; object-fit: cover;").rounded-4.w-100
       .product-info
         h3= title
         .rating
