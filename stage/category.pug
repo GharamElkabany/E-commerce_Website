@@ -1,13 +1,35 @@
 doctype html
 html(lang="en")
     head
+
         meta(charset='UTF-8')
         meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        title Casual | Shop Store
+
+        // Primary SEO
+        title Casual Clothing Collection | Shop Store 
+        meta(name="description" content="Explore the Casual Clothing Collection at Shop Store. Discover stylish t-shirts, hoodies, jeans, and everyday wear for men, women, and kids.")
+        meta(name="keywords" content="casual clothing, casual fashion, casual wear, t-shirts, hoodies, jeans, everyday clothes, shop store")
+        meta(name="author" content="Shop Store Team")
+
+        // Open Graph / Facebook
+        meta(property="og:title" content="Casual Clothing Collection | Shop Store ")
+        meta(property="og:description" content="Explore the Casual Clothing Collection at Shop Store. Discover stylish t-shirts, hoodies, jeans, and everyday wear for men, women, and kids.")
+        meta(property="og:type" content="website")
+        meta(property="og:url" content="http://localhost:3000/dist/category.html")
+        meta(property="og:image" content="assets/images/Gradient-Graphic-T-shirt.svg") 
+
+        // Twitter Card
+        meta(name="twitter:card" content="summary_large_image")
+        meta(name="twitter:title" content="Casual Clothing Collection | Shop Store ")
+        meta(name="twitter:description" content="Explore the Casual Clothing Collection at Shop Store. Discover stylish t-shirts, hoodies, jeans, and everyday wear for men, women, and kids.")
+        meta(name="twitter:image" content="assets/images/Gradient-Graphic-T-shirt.svg")
+
+        // Fonts & Styles
         link(rel='preconnect' href='https://fonts.googleapis.com')
         link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
         link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
         link(href='https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap' rel='stylesheet')
         link(rel='stylesheet' href='css/style.css')
+
     body
         include ./pug/layout/nav.pug
