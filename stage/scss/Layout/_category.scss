@@ -88,14 +88,15 @@ output {
 
 ///   / // /  ///  /  ///
 .color-circles {
-  width: 37px;
-  height: 37px;
+  width: 34px; 
+  height: 34px;  
   border: 2px solid #00000033 !important;
+  transition: all 0.2s ease-in-out;
 }
 
 .color-circles:hover {
   cursor: pointer;
-  filter: brightness(90%);
+  filter: brightness(80%); 
 }
 
 .size-btn {
@@ -203,6 +204,32 @@ output {
       border-radius: 20px;
     }
   }
+}
+// chatgpt ,couldnt do it 
+.d-flex.flex-wrap.gap-2 {
+    width: 100%;
+    max-width: 250px; 
+}
+.color-option {
+    position: relative;
+    cursor: pointer;
+}
+
+// .color-option.active .color-circles {
+//     filter: brightness(80%);
+// }
+
+.color-option.active .check-icon {
+    display: block !important;
+}
+
+.check-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);    
+    width: 16px;
+    height: 16px; 
 }
 
 
