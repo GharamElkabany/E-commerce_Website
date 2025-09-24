@@ -1,5 +1,5 @@
 @use './helpers/variables'; //will remove at the end, only use as reference 
-@use './helpers/images_sizes';
+@use './helpers/images_sizes'; 
 @use './global/global';
 @use './Layout/nav';
 @use './Layout/home';
@@ -10,3 +10,4 @@
 @use './helpers/reviewCard';
 @use './Layout/footer';
 
+ 

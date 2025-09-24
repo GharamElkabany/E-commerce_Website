@@ -4,7 +4,7 @@ body {
 }
 
 
-form {
+.category form {
   border: 1px solid var(--color-grey-border);
   font-weight: 600;
 
@@ -12,7 +12,7 @@ form {
 
 h1 {
   font-family: var(--font-family-body);
-  font-weight: 900;  
+  font-weight: 900;
   font-size: var(--font-size-style-category);
 }
 
@@ -31,20 +31,25 @@ form h4 {
   cursor: pointer;
   transition: all 0.1s ease-in;
 }
-.sortby{
-  color: var(--color-lightergrey-p);  
-  font-size: var(--font-size-body)!important;  
+
+.sortby {
+  color: var(--color-lightergrey-p);
+  font-size: var(--font-size-body) !important;
 }
+
 /* Change text + arrow color on hover */
 .list-group-item:hover {
   color: rgb(110, 60, 180) !important;
 }
-hr{
+
+hr {
   color: #333;
 }
+
 .color-option.active {
-    opacity: 0.8;
-} 
+  opacity: 0.8;
+}
+
 // .list-group-item img { 
 //     transition: all 0.1s ease;   
 // } 
@@ -148,15 +153,9 @@ output {
   margin-top: 0 !important;
 }
 
-.botnhov{
-    transition: background-color 0.3s ease;
 
-  &:hover { 
-    background-color: #bcbec5 !important;
-  }
-}
 
-.btn-dark,.btnhov {
+.btn-dark {
   transition: background-color 0.3s ease;
 
   &:hover {
@@ -164,8 +163,47 @@ output {
   }
 }
 
+.botnhov {
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ebedf4e1 !important;
+  }
+}
+
 .boldbutton {
   font-weight: bold;
 }
+
+.cat {
+  .pricing-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+
+    .current-price {
+      font-size: var(--font-size-h4)!important; 
+      font-weight: var(--font-weight-bold);
+      color: var(--color-black);
+    }
+
+    .original-price {
+      font-size: var(--font-size-h4)!important;
+      text-decoration: line-through;
+      color: #c4c7c9df;
+    }
+
+    .discount {
+      font-size: var(--font-size-discount);
+      color: var(--color-red-discount);
+      background-color: var(--color-red-discount-bg);
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+  }
+}
+
 
 // sass --watch stage/scss/style.scss:dist/css/style.css 
