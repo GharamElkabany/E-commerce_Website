@@ -127,7 +127,7 @@ To get started with compiling your Sass stylesheets and Pug templates, follow th
      ```bash
        pug stage/*.pug -o dist -w -P
      ```
-
+c
 
 ---
 

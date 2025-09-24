@@ -1,16 +1,40 @@
 doctype html
 html(lang="en")
     head
-        meta(charset='UTF-8')
-        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+        // Title (SEO)
         title Your Cart | Shop Store
-        link(rel='preconnect' href='https://fonts.googleapis.com')
-        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-        link(href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap' rel='stylesheet')
-        link(href='https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap' rel='stylesheet')
+
+        // SEO Meta Tags
+        meta(name="description" content="View and manage the items in your shopping cart at Shop Store. Secure checkout, fast delivery, and exclusive discounts.")
+        meta(name="keywords" content="shopping cart, checkout, Shop Store, online shopping, e-commerce")
+        //- For a cart page, usually better noindex
+        meta(name="robots" content="noindex, nofollow")
+
+        // Open Graph (Facebook, LinkedIn, WhatsApp)
+        meta(property="og:title" content="Your Cart | Shop Store")
+        meta(property="og:description" content="Check the items in your shopping cart before checkout at Shop Store.")
+        meta(property="og:image" content="http://127.0.0.1:5500/dist/assets/images/cart-icon.svg")
+        meta(property="og:url" content="http://127.0.0.1:5500/dist/cart.html")
+        meta(property="og:type" content="website")
+
+        // Twitter Card
+        meta(name="twitter:card" content="summary_large_image")
+        meta(name="twitter:title" content="Your Cart | Shop Store")
+        meta(name="twitter:description" content="Check the items in your shopping cart before checkout at Shop Store.")
+        meta(name="twitter:image" content="http://127.0.0.1:5500/dist/assets/images/cart-icon.svg")
+
+        // Fonts & Styles
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet")
+        link(href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css")
-        link(rel='stylesheet' href='css/style.css')
+        link(rel="stylesheet" href="css/style.css")
+
     body
         include ./pug/layout/nav.pug
         // Main content
