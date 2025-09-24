@@ -9,14 +9,15 @@ html(lang="en")
         link(href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet")
         link(href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css")
-        link(rel="stylesheet" href="css/style.css")
+        link(rel='stylesheet' href='css/style.css')
+
 
     body
 
         include ./pug/layout/nav.pug
 
-        //- Main Content
-        .container.py-5
+        //- Main Content 
+        .container.py-5 
             //- Breadcrumb
             nav.mb-4(aria-label="breadcrumb")
                 ol.breadcrumb
@@ -158,15 +159,15 @@ html(lang="en")
                         .d-flex.justify-content-center.mx-3
                             button.btn.btn-dark.bg-black.rounded-5.w-100.p-2.my-2(type="button") Apply Filter  
                 //- Product Grid
-                .col-12.col-md-9.px-0
+                .col-12.col-md-9.px-3
                     .d-flex.justify-content-between.align-items-center.mb-4
-                        h1.fw-bold.mb-0.px-3 Casual
-                        .d-flex.align-items-center
-                            p.text-muted.mb-0.me-3 Showing 1-10 of 100 products
-                            .dropdown
-                                a.text-dark.text-decoration-none.dropdown-toggle(
+                        h1.mb-0.px-3 Casual 
+                        .d-flex.align-items-center 
+                            p.sortby.text-muted.mb-0.me-3 Showing 1-10 of 100 products
+                            .dropdown.d-none.d-md-block
+                                a.sortby.text-dark.text-decoration-none.dropdown-toggle(
                                     href="#",
-                                    role="button",
+                                    role="button", 
                                     data-bs-toggle="dropdown",
                                     aria-expanded="false"
                                 ) Sort by: 
@@ -179,8 +180,8 @@ html(lang="en")
                                     li: a.dropdown-item(href="#") Highest Rated
 
                     //- Filter toggle button (only visible on small screens)
-                    .d-flex.justify-content-end.mb-3.d-md-none
-                        button.btn.btn-outline-light(
+                    .d-flex.justify-content-end.mb-3.d-md-none  
+                        button.btn.btn-outline-light.rounded-circle.bg-grey( 
                             type="button",
                             data-bs-toggle="offcanvas",
                             data-bs-target="#filterSidebar"
@@ -191,11 +192,11 @@ html(lang="en")
                                 style="height:20px; width:20px;"
                             )
 
-                    .row.row-cols-2.row-cols-md-3.g-3
+                    .row.row-cols-2.row-cols-md-3.gx-3.gy-2      
                         //- Product 1
                         .col
                             a(href="productDetails.html")
-                                .product-card
+                                .product-card.cat
                                     img.rounded-4.w-100(
                                         src="./assets/images/Gradient-Graphic-T-shirt.svg",
                                         alt="Gradient Graphic T-shirt",
@@ -215,7 +216,7 @@ html(lang="en")
                         //- Product 2
                         .col
                             a(href="productDetails.html")
-                                .product-card
+                                .product-card.cat
                                     img.rounded-4.w-100(
                                         src="./assets/images/Polo-with-Tipping-Details.svg",
                                         alt="Polo With Tipping Details",
@@ -236,7 +237,7 @@ html(lang="en")
                         //- Product 3
                         .col
                             a(href="productDetails.html")
-                                .product-card
+                                .product-card.cat
                                     img.rounded-4.w-100(
                                         src="./assets/images/Black-Striped-T-shirt.svg",
                                         alt="Black Striped T-shirt",
@@ -259,7 +260,7 @@ html(lang="en")
                         //- Product 4
                         .col
                             a(href="productDetails.html")
-                                .product-card
+                                .product-card.cat
                                     img.rounded-4.w-100(
                                         src="./assets/images/SKINNY-FIT-JEANS.svg",
                                         alt="SKINNY FIT JEANS",
@@ -281,7 +282,7 @@ html(lang="en")
                         //- Product 5
                         .col
                             a(href="productDetails.html")
-                                .product-card
+                                .product-card.cat
                                     img.rounded-4.w-100(
                                         src="./assets/images/CHECKERED-SHIRT.svg",
                                         alt="SLEEVE STRIPED T-SHIRT",
@@ -304,7 +305,7 @@ html(lang="en")
                         //- Product 6
                         .col
                             a(href="productDetails.html")
-                                .product-card
+                                .product-card.cat
                                     img.rounded-4.w-100(
                                         src="./assets/images/SLEEVE-STRIPED-T-SHIRT.svg",
                                         alt="Gradient Graphic T-shirt",
@@ -327,7 +328,7 @@ html(lang="en")
                         //- Product 7
                         .col
                             a(href="productDetails.html")
-                                .product-card
+                                .product-card.cat
                                     img.rounded-4.w-100(
                                         src="./assets/images/VERTICAL-STRIPED-SHIRT.svg",
                                         alt="Gradient Graphic T-shirt",
@@ -350,7 +351,7 @@ html(lang="en")
                         //- Product 8
                         .col
                             a(href="productDetails.html")
-                                .product-card
+                                .product-card.cat
                                     img.rounded-4.w-100(
                                         src="./assets/images/COURAGE-GRAPHIC-T-SHIRT.svg",
                                         alt="Courage Graphic T-shirt",
@@ -370,7 +371,7 @@ html(lang="en")
                         //- Product 9
                         .col
                             a(href="productDetails.html")
-                                .product-card
+                                .product-card.cat
                                     img.rounded-4.w-100(
                                         src="./assets/images/LOOSE-FIT-BERMUDA-SHORTS.svg",
                                         alt="Loose Fit Bermuda Shorts",
@@ -386,20 +387,38 @@ html(lang="en")
                                         .pricing-info
                                             .current-price $80       
                     //- Pagination
+                    hr
                     nav.mt-5(aria-label="Product pagination")
-                        ul.pagination.justify-content-center.flex-nowrap
-                            li.page-item
-                                a.page-link.text-dark(href="#" aria-label="Previous") Previous
-                            li.page-item.d-none.d-md-block: a.page-link.text-dark(href="#") 1
-                            li.page-item.d-none.d-md-block: a.page-link.text-dark(href="#") 2
-                            li.page-item.d-none.d-md-block: a.page-link.text-dark(href="#") 3
-                            li.page-item.disabled.d-none.d-md-block: span.page-link.text-dark ...
-                            li.page-item.d-none.d-md-block: a.page-link.text-dark(href="#") 8
-                            li.page-item.d-none.d-md-block: a.page-link.text-dark(href="#") 9
-                            li.page-item.active.d-none.d-md-block
-                                a.page-link.bg-dark.border-dark.text-white(href="#") 10
-                            li.page-item
-                                a.page-link.text-dark(href="#" aria-label="Next") Next →
+                        .d-flex.justify-content-between.align-items-center.flex-nowrap
+                            //- Previous button
+                            a.botnhov.btn.bg-white.border.boldbutton.rounded-2.px-3(href="#" aria-label="Previous") 
+                                | ← Previous 
+                            
+                            //- Page numbers - different layout for mobile vs desktop
+                            .d-flex.align-items-center
+                                //- for phoness
+                                .d-md-none
+                                    ul.pagination.mb-0
+                                        li.page-item: a.page-link.text-dark(href="#") 1
+                                        li.page-item: a.page-link.text-dark(href="#") 2
+                                        li.page-item.disabled: span.page-link.text-dark ...
+                                        li.page-item: a.page-link.text-dark(href="#") 9
+                                        li.page-item.active: a.page-link.bg-dark.border-dark.text-white(href="#") 10
+                                
+                                //- apart   
+                                .d-none.d-md-flex
+                                    ul.pagination.mb-0
+                                        li.page-item: span.page-link.text-dark 1
+                                        li.page-item: a.page-link.text-dark(href="#") 2
+                                        li.page-item: a.page-link.text-dark(href="#") 3
+                                        li.page-item.disabled: span.page-link.text-dark ...
+                                        li.page-item: a.page-link.text-dark(href="#") 8
+                                        li.page-item: a.page-link.text-dark(href="#") 9
+                                        li.page-item: a.page-link.text-dark(href="#") 10
+                            
+                            //- Next button 
+                            a.botnhov.btn.bg-white.border.boldbutton.rounded-2.px-3(href="#" aria-label="Next") 
+                                | Next →
 
             //- Offcanvas filter for phones
             .offcanvas.offcanvas-bottom(tabindex="-1" id="filterSidebar")
@@ -436,16 +455,16 @@ html(lang="en")
                             button.btn.p-0.border-0.bg-transparent(
                                 type="button",
                                 data-bs-toggle="collapse",
-                                data-bs-target="#priceCollapse",
+                                data-bs-target="#priceCollapseMobile",
                                 aria-expanded="true",
-                                aria-controls="priceCollapse"
+                                aria-controls="priceCollapseMobile"
                             )
                                 img(src="./assets/icons/down-arrow.svg" alt="v")
 
-                        .collapse.show.mb-4.mx-3.border-bottom.pb-2(id="priceCollapse")
-                            label.form-label(for="priceRange") Price
+                        .collapse.show.mb-4.mx-3.border-bottom.pb-2(id="priceCollapseMobile")
+                            label.form-label(for="priceRangeMobile") Price
                             input.form-range.mb-2(
-                                id="priceRange",
+                                id="priceRangeMobile",
                                 type="range",
                                 min="50",
                                 max="1000",
@@ -457,8 +476,7 @@ html(lang="en")
                                     | From 
                                     span $50
                                     |  to $
-                                    span(id="rangeValue") 60
-
+                                    span(id="rangeValueMobile") 60
                         //- Colors
                         .d-flex.justify-content-between.align-items-center.mb-3.px-3
                             h4.mb-0 Colors
@@ -536,11 +554,16 @@ html(lang="en")
                                     img(src="./assets/icons/right-arrow.svg" alt="&gt;")
 
                         .d-flex.justify-content-center.mx-3
-                            button.btn.btn-dark.bg-black.rounded-5.w-100.p-2.my-2(type="button") Apply Filter
+                            button.btn.btn-dark.bg-black.rounded-5.w-100.p-2.my-2(
+                                type="button",
+                                onmouseover="this.style.backgroundColor='#333'",
+                                onmouseout="this.style.backgroundColor='#000'"
+                            ) Apply Filter
         include ./pug/layout/footer.pug
 
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js")
         script.
+            // Function for desktop price range
             const rangeInput = document.getElementById('priceRange');
             const rangeOutput = document.getElementById('rangeValue');
             if (rangeInput && rangeOutput) {
@@ -548,4 +571,14 @@ html(lang="en")
                 rangeInput.addEventListener('input', function () {
                     rangeOutput.textContent = this.value;
                 });
-            }                                                                                                   
+            }
+            
+            // Function for mobile offcanvas price range
+            const rangeInputMobile = document.getElementById('priceRangeMobile');
+            const rangeOutputMobile = document.getElementById('rangeValueMobile');
+            if (rangeInputMobile && rangeOutputMobile) {
+                rangeOutputMobile.textContent = rangeInputMobile.value;
+                rangeInputMobile.addEventListener('input', function () {
+                    rangeOutputMobile.textContent = this.value;
+                });
+            }                                                                                       
