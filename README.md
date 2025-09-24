@@ -4,6 +4,8 @@
 
 Welcome to the **E-commerce Website** project! This is a fully responsive, modern e-commerce platform built using the latest web technologies like **Google Fonts**, **Sass**, **Pug**, and **Bootstrap**. It's designed for users to easily browse products, check out details, and manage their shopping carts with a smooth user experience. 
 
+🌐 Live Demo: [Shop.co E-commerce website](https://shopco-ashen.vercel.app/index.html)
+
 ---
 
 ## Technologies Used ⚙️
